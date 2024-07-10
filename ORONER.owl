@@ -1,0 +1,4305 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/2022/9/OrganisationResilienceOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/2022/9/OrganisationResilienceOntology"
+     versionIRI="http://www.semanticweb.org/2022/9/OrganisationResilienceOntology/1.0">
+    <Prefix name="" IRI="http://www.semanticweb.org/2022/9/OrganisationResilienceOntology"/>
+    <Prefix name="geo" IRI="http://www.opengis.net/ont/geosparql#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="orga" IRI="http://www.semanticweb.org/2022/9/OrganisationResilienceOntology#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.org/NET/c4dm/event.owl</Import>
+    <Import>http://www.opengis.net/ont/geosparql</Import>
+    <Import>http://www.w3.org/2006/time#2016</Import>
+    <Declaration>
+        <Class abbreviatedIRI="geo:Feature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AdministrativeMission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AfterCrisisStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AlcoholBasedHandSanitizer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BeforeCrisisStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BehaviorCapability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoundarySpanner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BusDrivers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Capability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CaringCovid19Patients"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CaringPatients"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cause"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chief"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CitizenMission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CleaningClassrooms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CleaningStaff"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClinicalStaff"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CognitiveCapability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cooks"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Crisis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CrisisManagementStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CrisisMission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Damage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Decision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeployingPolice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DuringCrisisStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EconomicMission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EducatingChildren"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmotionalCapability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EnvironmentalDamage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExternalCrisisMission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Federation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FeedingChildren"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FinancialCapability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FunctionalDamage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FunctionalStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HelpingFragileCitizens"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hospital"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HospitalBeds"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HostingChildrenClinicalStaff"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumanCapability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumanCause"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumanDamage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumanResource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumanResourceManagement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InformationalResource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InfrastructuralDamage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InterOrganizationNetwork"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interaction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intercommunity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InternalCrisisMission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LeadershipStyle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaterialResource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetaMission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetaOrganization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MissionStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Municipality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NGO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NaturalCause"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonMaterialResource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonProfitMission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Objective"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ObjectiveStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OrganizationalCapability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PoliceOfficers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prefecture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProfitMission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RecruitmentMission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RelationalCapability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Resource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Respirators"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#School"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SecurityMission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialMission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SurgicalMasks"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Task"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TaskStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Teachers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TechnologicalCapability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TechnologicalCause"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TopLevelManagement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransportingChildren"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Union"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AgreeWithMetaMission"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DisagreeWithMetaMission"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsInformationalResourceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#NoneOrganizationRelationalCapability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OrganizationRelationalCapability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#PossibleResourceExchange"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#SameOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#atTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsToCrisis"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#collaborate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#composeMIssion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#cooperate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#coordinate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fulfill"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#giveAutonomy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#giveDelegation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAfterCrisisManagementStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBeforeCrisisManagementStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBehavior"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCapability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasChief"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasControl"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasConvergentObjective"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCrisisManagementStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDamage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDivergentObjective"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDuringCrisisManagementStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEnvironmentalDamage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFunctionalDamage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHead"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHorizontalInteraction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHumanCapability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHumanDamage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHumanResource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHumanResourceOfMetaOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasImpactOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInformationResource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInfrastructuralDamage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInteraction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInterdependence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLeadershipStyle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMaterialResource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMission"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNegativeHorizontalInteraction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNonMaterialResource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOrganizationMember"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOrganizationalCapability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParticipant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPositiveHorizontalInteraction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRelationWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasResource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVerticalInteraction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAfterCrisisManagementStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAssignedToOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isBeforeCrisisManagementStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isBehaviorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCapabilityOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isChiefOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isComposedOfObjective"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isComposedOfOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCrisisManagementStatusOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDuringCrisisManagementStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFulfilledThrough"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isHeadOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isHumanCapabilityOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isHumanResourceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isImpactedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isInChargeOfTask"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isInConflict"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isIndependent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLeadershipStyleOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMaterialResourceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMemberofInterOrganizationNetwork"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMissionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isNonMaterialResourceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isNotSameOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isOrganizationalCapabilityOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isProvidedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isResourceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSharedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTakenBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#metaOrganizationHasMember"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#participate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sharesResource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sharesResourceWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#takesDecision"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasQuantity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasValue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ABHSHospitalBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ABHSHospitalQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ABHSInterCoBMO"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ABHSMunicipalityBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ABHSMunicipalityGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ABHSMunicipalityQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ABHSPrefectureFinistere"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ABHSSchoolBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ABHSSchoolGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ABHSSchoolQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Absorbe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AchievedObjectiveStatus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AchievedTaskStatus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ChiefOrga1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ChiefOrga2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ChiefOrga3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ChiefOrga4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Collapse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Covid19_Step1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Degraded"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Directive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DisruptedMissionStatus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DisruptedObjectiveStatus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DisruptedTaskStatus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Factor1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FailedMissionStatus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FailedObjectiveStatus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FailedTaskStatus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FunctionalDamage1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Human1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#InterOrganizationNetwork1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Interaction1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Interaction2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Interval1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MedecinsSansFrontieres"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NonPrepared"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Orga1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Orga2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Organization3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Organization4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Participative"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Place1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Place1Geo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PlaceOrga1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PlaceOrga1Geo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prepared"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Proactive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Resilient"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Resistant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#StormFinistere"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#T1End"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#T1Start"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Thing1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TransportingChildrenBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TransportingChildrenGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TransportingChildrenQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WaitAndSee"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#associationMairesDeFrance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#associationMairesDeFrance13"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#associationMairesDeFrance29"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#busDriverMunicipalityBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#busDriverMunicipalityGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#busDriverMunicipalityQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#busMunicipalityBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#busMunicipalityGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#busMunicipalityQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#caringAllPatientsBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#caringAllPatientsQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#caringCovid19PatientsBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#caringCovid19PatientsQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cityCouncillorMunicipalityBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cleaningClassroomsBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cleaningClassroomsGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cleaningClassroomsQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cleaningStaffMunicipalityBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cleaningStaffMunicipalityGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cleaningStaffMunicipalityQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#clinicalStaffHospitalBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#clinicalStaffHospitalQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cooksMunicipalityBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cooksMunicipalityGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cooksMunicipalityQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#covid19CrisisMunicipalityBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#deployingPoliceBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#deployingPoliceGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#deployingPoliceQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#educatingChildrenBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#educatingChildrenGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#educatingChildrenQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#feedingChildrenBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#feedingChildrenGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#feedingChildrenQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#head_Hospital_Brest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#head_Hospital_Quimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#head_Municipality_Brest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#head_Municipality_Guipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#head_Municipality_Quimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#head_Prefecture_Finistere"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#head_School_Brest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#head_School_Guipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#head_School_Quimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#head_interCo_BMO"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#helpingFragileCitizensBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#helpingFragileCitizensGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#helpingFragileCitizensQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hospitalBedsHospitalBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hospitalBedsHospitalQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hospital_Brest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hostingChildrenClinicalStaffBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hostingChildrenClinicalStaffGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hostingChildrenClinicalStaffQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#interCo_BMO"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#interOrganizationNetwork_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maskHospitalBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maskHospitalQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maskInterCoBMO"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maskMunicipalityBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maskMunicipalityGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maskMunicipalityQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maskPrefectureFinistere"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maskSchoolBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maskSchoolGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maskSchoolQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#municipality_Brest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#policeOfficersMunicipalityBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#policeOfficersMunicipalityGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#policeOfficersMunicipalityQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#prefecture_Finistere"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#prefecture_Morbihan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#respiratorsHospitalBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#respiratorsHospitalQuimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#school_Brest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#school_Guipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#school_Quimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#teachersSchoolBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#teachersSchoolGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#teachersSchoolQuimper"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#AdministrativeMission"/>
+        <ObjectUnionOf>
+            <Class IRI="#HumanResourceManagement"/>
+            <Class IRI="#RecruitmentMission"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#AfterCrisisStatus"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Collapse"/>
+            <NamedIndividual IRI="#Resilient"/>
+            <NamedIndividual IRI="#Resistant"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BeforeCrisisStatus"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#NonPrepared"/>
+            <NamedIndividual IRI="#Prepared"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BehaviorCapability"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Proactive"/>
+            <NamedIndividual IRI="#WaitAndSee"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BoundarySpanner"/>
+        <ObjectIntersectionOf>
+            <ObjectUnionOf>
+                <Class IRI="#Chief"/>
+                <Class IRI="#TopLevelManagement"/>
+            </ObjectUnionOf>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#isHumanResourceOf"/>
+                <Class IRI="#Organization"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Chief"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#HumanResource"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#isHeadOf"/>
+                <Class IRI="#Organization"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CitizenMission"/>
+        <ObjectUnionOf>
+            <Class IRI="#EconomicMission"/>
+            <Class IRI="#SecurityMission"/>
+            <Class IRI="#SocialMission"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DuringCrisisStatus"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Absorbe"/>
+            <NamedIndividual IRI="#Degraded"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#InterOrganizationNetwork"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#hasOrganizationMember"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#Organization"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasInteraction"/>
+                    <Class IRI="#Organization"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LeadershipStyle"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Directive"/>
+            <NamedIndividual IRI="#Participative"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MetaOrganization"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Organization"/>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#isComposedOfObjective"/>
+                <Class IRI="#Organization"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Mission"/>
+        <ObjectUnionOf>
+            <Class IRI="#AdministrativeMission"/>
+            <Class IRI="#CitizenMission"/>
+            <Class IRI="#CrisisMission"/>
+            <Class IRI="#MetaMission"/>
+            <Class IRI="#NonProfitMission"/>
+            <Class IRI="#ProfitMission"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MissionStatus"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#AchievedMissionStatus"/>
+            <NamedIndividual IRI="#DisruptedMissionStatus"/>
+            <NamedIndividual IRI="#FailedMissionStatus"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ObjectiveStatus"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#AchievedObjectiveStatus"/>
+            <NamedIndividual IRI="#DisruptedObjectiveStatus"/>
+            <NamedIndividual IRI="#FailedObjectiveStatus"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Organization"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasHead"/>
+                <Class IRI="#Chief"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasMission"/>
+                <Class IRI="#Mission"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasResource"/>
+                <Class IRI="#Resource"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#hasInteraction"/>
+                <Class IRI="#Organization"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TaskStatus"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#AchievedTaskStatus"/>
+            <NamedIndividual IRI="#DisruptedTaskStatus"/>
+            <NamedIndividual IRI="#FailedTaskStatus"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AdministrativeMission"/>
+        <Class IRI="#Mission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AfterCrisisStatus"/>
+        <Class IRI="#CrisisManagementStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AlcoholBasedHandSanitizer"/>
+        <Class IRI="#MaterialResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BeforeCrisisStatus"/>
+        <Class IRI="#CrisisManagementStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BehaviorCapability"/>
+        <Class IRI="#HumanCapability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoundarySpanner"/>
+        <Class IRI="#HumanResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bus"/>
+        <Class IRI="#MaterialResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BusDrivers"/>
+        <Class IRI="#HumanResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CaringCovid19Patients"/>
+        <Class IRI="#ExternalCrisisMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CaringPatients"/>
+        <Class IRI="#SocialMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chief"/>
+        <Class IRI="#HumanResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CitizenMission"/>
+        <Class IRI="#Mission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CleaningClassrooms"/>
+        <Class IRI="#SocialMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CleaningStaff"/>
+        <Class IRI="#HumanResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClinicalStaff"/>
+        <Class IRI="#HumanResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CognitiveCapability"/>
+        <Class IRI="#HumanCapability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cooks"/>
+        <Class IRI="#HumanResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crisis"/>
+        <Class IRI="http://purl.org/NET/c4dm/event.owl#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CrisisMission"/>
+        <Class IRI="#Mission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeployingPolice"/>
+        <Class IRI="#SecurityMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DuringCrisisStatus"/>
+        <Class IRI="#CrisisManagementStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EconomicMission"/>
+        <Class IRI="#CitizenMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EducatingChildren"/>
+        <Class IRI="#SocialMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmotionalCapability"/>
+        <Class IRI="#HumanCapability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EnvironmentalDamage"/>
+        <Class IRI="#Damage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExternalCrisisMission"/>
+        <Class IRI="#CrisisMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Federation"/>
+        <Class IRI="#MetaOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FeedingChildren"/>
+        <Class IRI="#SocialMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FinancialCapability"/>
+        <Class IRI="#OrganizationalCapability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FunctionalDamage"/>
+        <Class IRI="#Damage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HelpingFragileCitizens"/>
+        <Class IRI="#SocialMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hospital"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HospitalBeds"/>
+        <Class IRI="#MaterialResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HostingChildrenClinicalStaff"/>
+        <Class IRI="#ExternalCrisisMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanCapability"/>
+        <Class IRI="#Capability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanCause"/>
+        <Class IRI="#Cause"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanDamage"/>
+        <Class IRI="#Damage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanResource"/>
+        <Class IRI="#NonMaterialResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanResourceManagement"/>
+        <Class IRI="#AdministrativeMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InformationalResource"/>
+        <Class IRI="#NonMaterialResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InfrastructuralDamage"/>
+        <Class IRI="#Damage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intercommunity"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InternalCrisisMission"/>
+        <Class IRI="#CrisisMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaterialResource"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetaMission"/>
+        <Class IRI="#Mission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetaOrganization"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Municipality"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NGO"/>
+        <Class IRI="#MetaOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NaturalCause"/>
+        <Class IRI="#Cause"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonMaterialResource"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonProfitMission"/>
+        <Class IRI="#Mission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <Class abbreviatedIRI="geo:Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OrganizationalCapability"/>
+        <Class IRI="#Capability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PoliceOfficers"/>
+        <Class IRI="#HumanResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prefecture"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProfitMission"/>
+        <Class IRI="#Mission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RecruitmentMission"/>
+        <Class IRI="#AdministrativeMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelationalCapability"/>
+        <Class IRI="#HumanCapability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Respirators"/>
+        <Class IRI="#MaterialResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#School"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecurityMission"/>
+        <Class IRI="#CitizenMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialMission"/>
+        <Class IRI="#CitizenMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SurgicalMasks"/>
+        <Class IRI="#MaterialResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Teachers"/>
+        <Class IRI="#HumanResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechnologicalCapability"/>
+        <Class IRI="#OrganizationalCapability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechnologicalCause"/>
+        <Class IRI="#Cause"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TopLevelManagement"/>
+        <Class IRI="#HumanResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TransportingChildren"/>
+        <Class IRI="#SocialMission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Union"/>
+        <Class IRI="#MetaOrganization"/>
+    </SubClassOf>
+    <DisjointUnion>
+        <Class IRI="#Capability"/>
+        <Class IRI="#HumanCapability"/>
+        <Class IRI="#OrganizationalCapability"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#CrisisManagementStatus"/>
+        <Class IRI="#AfterCrisisStatus"/>
+        <Class IRI="#BeforeCrisisStatus"/>
+        <Class IRI="#DuringCrisisStatus"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#HumanCapability"/>
+        <Class IRI="#BehaviorCapability"/>
+        <Class IRI="#CognitiveCapability"/>
+        <Class IRI="#EmotionalCapability"/>
+        <Class IRI="#RelationalCapability"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#NonMaterialResource"/>
+        <Class IRI="#HumanResource"/>
+        <Class IRI="#InformationalResource"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#Resource"/>
+        <Class IRI="#MaterialResource"/>
+        <Class IRI="#NonMaterialResource"/>
+    </DisjointUnion>
+    <ClassAssertion>
+        <Class IRI="#AlcoholBasedHandSanitizer"/>
+        <NamedIndividual IRI="#ABHSHospitalBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AlcoholBasedHandSanitizer"/>
+        <NamedIndividual IRI="#ABHSHospitalQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AlcoholBasedHandSanitizer"/>
+        <NamedIndividual IRI="#ABHSInterCoBMO"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AlcoholBasedHandSanitizer"/>
+        <NamedIndividual IRI="#ABHSMunicipalityBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AlcoholBasedHandSanitizer"/>
+        <NamedIndividual IRI="#ABHSMunicipalityGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AlcoholBasedHandSanitizer"/>
+        <NamedIndividual IRI="#ABHSMunicipalityQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AlcoholBasedHandSanitizer"/>
+        <NamedIndividual IRI="#ABHSPrefectureFinistere"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AlcoholBasedHandSanitizer"/>
+        <NamedIndividual IRI="#ABHSSchoolBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AlcoholBasedHandSanitizer"/>
+        <NamedIndividual IRI="#ABHSSchoolGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AlcoholBasedHandSanitizer"/>
+        <NamedIndividual IRI="#ABHSSchoolQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DuringCrisisStatus"/>
+        <NamedIndividual IRI="#Absorbe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MissionStatus"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ObjectiveStatus"/>
+        <NamedIndividual IRI="#AchievedObjectiveStatus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TaskStatus"/>
+        <NamedIndividual IRI="#AchievedTaskStatus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BoundarySpanner"/>
+        <NamedIndividual IRI="#ChiefOrga1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chief"/>
+        <NamedIndividual IRI="#ChiefOrga1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chief"/>
+        <NamedIndividual IRI="#ChiefOrga2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chief"/>
+        <NamedIndividual IRI="#ChiefOrga3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chief"/>
+        <NamedIndividual IRI="#ChiefOrga4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AfterCrisisStatus"/>
+        <NamedIndividual IRI="#Collapse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Crisis"/>
+        <NamedIndividual IRI="#Covid19_Step1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DuringCrisisStatus"/>
+        <NamedIndividual IRI="#Degraded"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LeadershipStyle"/>
+        <NamedIndividual IRI="#Directive"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MissionStatus"/>
+        <NamedIndividual IRI="#DisruptedMissionStatus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ObjectiveStatus"/>
+        <NamedIndividual IRI="#DisruptedObjectiveStatus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TaskStatus"/>
+        <NamedIndividual IRI="#DisruptedTaskStatus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/NET/c4dm/event.owl#Factor"/>
+        <NamedIndividual IRI="#Factor1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MissionStatus"/>
+        <NamedIndividual IRI="#FailedMissionStatus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ObjectiveStatus"/>
+        <NamedIndividual IRI="#FailedObjectiveStatus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TaskStatus"/>
+        <NamedIndividual IRI="#FailedTaskStatus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FunctionalDamage"/>
+        <NamedIndividual IRI="#FunctionalDamage1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HumanResource"/>
+        <NamedIndividual IRI="#Human1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InterOrganizationNetwork"/>
+        <NamedIndividual IRI="#InterOrganizationNetwork1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Interaction"/>
+        <NamedIndividual IRI="#Interaction1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Interaction"/>
+        <NamedIndividual IRI="#Interaction2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2006/time#Interval"/>
+        <NamedIndividual IRI="#Interval1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NGO"/>
+        <NamedIndividual IRI="#MedecinsSansFrontieres"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeforeCrisisStatus"/>
+        <NamedIndividual IRI="#NonPrepared"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#Orga1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#Orga2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#Organization3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#Organization4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LeadershipStyle"/>
+        <NamedIndividual IRI="#Participative"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="geo:Feature"/>
+        <NamedIndividual IRI="#Place1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="geo:Geometry"/>
+        <NamedIndividual IRI="#Place1Geo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="geo:Feature"/>
+        <NamedIndividual IRI="#PlaceOrga1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="geo:Geometry"/>
+        <NamedIndividual IRI="#PlaceOrga1Geo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeforeCrisisStatus"/>
+        <NamedIndividual IRI="#Prepared"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BehaviorCapability"/>
+        <NamedIndividual IRI="#Proactive"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AfterCrisisStatus"/>
+        <NamedIndividual IRI="#Resilient"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AfterCrisisStatus"/>
+        <NamedIndividual IRI="#Resistant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2006/time#Instant"/>
+        <NamedIndividual IRI="#T1End"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2006/time#Instant"/>
+        <NamedIndividual IRI="#T1Start"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Thing1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TransportingChildren"/>
+        <NamedIndividual IRI="#TransportingChildrenBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TransportingChildren"/>
+        <NamedIndividual IRI="#TransportingChildrenGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TransportingChildren"/>
+        <NamedIndividual IRI="#TransportingChildrenQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BehaviorCapability"/>
+        <NamedIndividual IRI="#WaitAndSee"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Union"/>
+        <NamedIndividual IRI="#associationMairesDeFrance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BusDrivers"/>
+        <NamedIndividual IRI="#busDriverMunicipalityBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BusDrivers"/>
+        <NamedIndividual IRI="#busDriverMunicipalityGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BusDrivers"/>
+        <NamedIndividual IRI="#busDriverMunicipalityQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bus"/>
+        <NamedIndividual IRI="#busMunicipalityBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bus"/>
+        <NamedIndividual IRI="#busMunicipalityGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bus"/>
+        <NamedIndividual IRI="#busMunicipalityQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaringPatients"/>
+        <NamedIndividual IRI="#caringAllPatientsBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaringPatients"/>
+        <NamedIndividual IRI="#caringAllPatientsQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaringCovid19Patients"/>
+        <NamedIndividual IRI="#caringCovid19PatientsBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CaringCovid19Patients"/>
+        <NamedIndividual IRI="#caringCovid19PatientsQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TopLevelManagement"/>
+        <NamedIndividual IRI="#cityCouncillorMunicipalityBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CleaningClassrooms"/>
+        <NamedIndividual IRI="#cleaningClassroomsBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CleaningClassrooms"/>
+        <NamedIndividual IRI="#cleaningClassroomsGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CleaningClassrooms"/>
+        <NamedIndividual IRI="#cleaningClassroomsQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CleaningStaff"/>
+        <NamedIndividual IRI="#cleaningStaffMunicipalityBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CleaningStaff"/>
+        <NamedIndividual IRI="#cleaningStaffMunicipalityGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CleaningStaff"/>
+        <NamedIndividual IRI="#cleaningStaffMunicipalityQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClinicalStaff"/>
+        <NamedIndividual IRI="#clinicalStaffHospitalBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClinicalStaff"/>
+        <NamedIndividual IRI="#clinicalStaffHospitalQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cooks"/>
+        <NamedIndividual IRI="#cooksMunicipalityBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cooks"/>
+        <NamedIndividual IRI="#cooksMunicipalityGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cooks"/>
+        <NamedIndividual IRI="#cooksMunicipalityQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeployingPolice"/>
+        <NamedIndividual IRI="#deployingPoliceBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeployingPolice"/>
+        <NamedIndividual IRI="#deployingPoliceGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DeployingPolice"/>
+        <NamedIndividual IRI="#deployingPoliceQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EducatingChildren"/>
+        <NamedIndividual IRI="#educatingChildrenBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EducatingChildren"/>
+        <NamedIndividual IRI="#educatingChildrenGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EducatingChildren"/>
+        <NamedIndividual IRI="#educatingChildrenQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FeedingChildren"/>
+        <NamedIndividual IRI="#feedingChildrenBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FeedingChildren"/>
+        <NamedIndividual IRI="#feedingChildrenGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FeedingChildren"/>
+        <NamedIndividual IRI="#feedingChildrenQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chief"/>
+        <NamedIndividual IRI="#head_Hospital_Brest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chief"/>
+        <NamedIndividual IRI="#head_Hospital_Quimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chief"/>
+        <NamedIndividual IRI="#head_Municipality_Brest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chief"/>
+        <NamedIndividual IRI="#head_Municipality_Guipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chief"/>
+        <NamedIndividual IRI="#head_Municipality_Quimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chief"/>
+        <NamedIndividual IRI="#head_Prefecture_Finistere"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chief"/>
+        <NamedIndividual IRI="#head_School_Brest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chief"/>
+        <NamedIndividual IRI="#head_School_Guipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chief"/>
+        <NamedIndividual IRI="#head_School_Quimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chief"/>
+        <NamedIndividual IRI="#head_interCo_BMO"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HelpingFragileCitizens"/>
+        <NamedIndividual IRI="#helpingFragileCitizensBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HelpingFragileCitizens"/>
+        <NamedIndividual IRI="#helpingFragileCitizensGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HelpingFragileCitizens"/>
+        <NamedIndividual IRI="#helpingFragileCitizensQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HospitalBeds"/>
+        <NamedIndividual IRI="#hospitalBedsHospitalBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HospitalBeds"/>
+        <NamedIndividual IRI="#hospitalBedsHospitalQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospital"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospital"/>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HostingChildrenClinicalStaff"/>
+        <NamedIndividual IRI="#hostingChildrenClinicalStaffBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HostingChildrenClinicalStaff"/>
+        <NamedIndividual IRI="#hostingChildrenClinicalStaffGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HostingChildrenClinicalStaff"/>
+        <NamedIndividual IRI="#hostingChildrenClinicalStaffQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Intercommunity"/>
+        <NamedIndividual IRI="#interCo_BMO"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InterOrganizationNetwork"/>
+        <NamedIndividual IRI="#interOrganizationNetwork_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurgicalMasks"/>
+        <NamedIndividual IRI="#maskHospitalBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurgicalMasks"/>
+        <NamedIndividual IRI="#maskHospitalQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurgicalMasks"/>
+        <NamedIndividual IRI="#maskInterCoBMO"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurgicalMasks"/>
+        <NamedIndividual IRI="#maskMunicipalityBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurgicalMasks"/>
+        <NamedIndividual IRI="#maskMunicipalityGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurgicalMasks"/>
+        <NamedIndividual IRI="#maskMunicipalityQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurgicalMasks"/>
+        <NamedIndividual IRI="#maskPrefectureFinistere"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurgicalMasks"/>
+        <NamedIndividual IRI="#maskSchoolBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurgicalMasks"/>
+        <NamedIndividual IRI="#maskSchoolGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurgicalMasks"/>
+        <NamedIndividual IRI="#maskSchoolQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Municipality"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Municipality"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PoliceOfficers"/>
+        <NamedIndividual IRI="#policeOfficersMunicipalityBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PoliceOfficers"/>
+        <NamedIndividual IRI="#policeOfficersMunicipalityGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PoliceOfficers"/>
+        <NamedIndividual IRI="#policeOfficersMunicipalityQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Prefecture"/>
+        <NamedIndividual IRI="#prefecture_Finistere"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Prefecture"/>
+        <NamedIndividual IRI="#prefecture_Morbihan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Respirators"/>
+        <NamedIndividual IRI="#respiratorsHospitalBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Respirators"/>
+        <NamedIndividual IRI="#respiratorsHospitalQuimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#School"/>
+        <NamedIndividual IRI="#school_Brest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#School"/>
+        <NamedIndividual IRI="#school_Guipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#School"/>
+        <NamedIndividual IRI="#school_Quimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Teachers"/>
+        <NamedIndividual IRI="#teachersSchoolBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Teachers"/>
+        <NamedIndividual IRI="#teachersSchoolGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Teachers"/>
+        <NamedIndividual IRI="#teachersSchoolQuimper"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#hospital_Brest"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#school_Brest"/>
+        <NamedIndividual IRI="#school_Guipavas"/>
+        <NamedIndividual IRI="#school_Quimper"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHumanCapability"/>
+        <NamedIndividual IRI="#ChiefOrga1"/>
+        <NamedIndividual IRI="#WaitAndSee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLeadershipStyle"/>
+        <NamedIndividual IRI="#ChiefOrga1"/>
+        <NamedIndividual IRI="#Directive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelationWith"/>
+        <NamedIndividual IRI="#ChiefOrga1"/>
+        <NamedIndividual IRI="#ChiefOrga3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isHumanResourceOf"/>
+        <NamedIndividual IRI="#ChiefOrga1"/>
+        <NamedIndividual IRI="#Orga2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHumanCapability"/>
+        <NamedIndividual IRI="#ChiefOrga2"/>
+        <NamedIndividual IRI="#Proactive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLeadershipStyle"/>
+        <NamedIndividual IRI="#ChiefOrga2"/>
+        <NamedIndividual IRI="#Participative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHumanCapability"/>
+        <NamedIndividual IRI="#ChiefOrga3"/>
+        <NamedIndividual IRI="#WaitAndSee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLeadershipStyle"/>
+        <NamedIndividual IRI="#ChiefOrga3"/>
+        <NamedIndividual IRI="#Participative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHumanCapability"/>
+        <NamedIndividual IRI="#ChiefOrga4"/>
+        <NamedIndividual IRI="#Proactive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLeadershipStyle"/>
+        <NamedIndividual IRI="#ChiefOrga4"/>
+        <NamedIndividual IRI="#Directive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/NET/c4dm/event.owl#factor"/>
+        <NamedIndividual IRI="#Covid19_Step1"/>
+        <NamedIndividual IRI="#Factor1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/NET/c4dm/event.owl#place"/>
+        <NamedIndividual IRI="#Covid19_Step1"/>
+        <NamedIndividual IRI="#Place1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/NET/c4dm/event.owl#product"/>
+        <NamedIndividual IRI="#Covid19_Step1"/>
+        <NamedIndividual IRI="#Thing1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/NET/c4dm/event.owl#time"/>
+        <NamedIndividual IRI="#Covid19_Step1"/>
+        <NamedIndividual IRI="#Interval1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasImpactOn"/>
+        <NamedIndividual IRI="#Covid19_Step1"/>
+        <NamedIndividual IRI="#Orga1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#hasTime"/>
+        <NamedIndividual IRI="#Covid19_Step1"/>
+        <NamedIndividual IRI="#Interval1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLeadershipStyleOf"/>
+        <NamedIndividual IRI="#Directive"/>
+        <NamedIndividual IRI="#ChiefOrga1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLeadershipStyleOf"/>
+        <NamedIndividual IRI="#Directive"/>
+        <NamedIndividual IRI="#ChiefOrga4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isHumanResourceOf"/>
+        <NamedIndividual IRI="#Human1"/>
+        <NamedIndividual IRI="#Orga1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOrganizationMember"/>
+        <NamedIndividual IRI="#InterOrganizationNetwork1"/>
+        <NamedIndividual IRI="#Orga2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOrganizationMember"/>
+        <NamedIndividual IRI="#InterOrganizationNetwork1"/>
+        <NamedIndividual IRI="#Organization3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOrganizationMember"/>
+        <NamedIndividual IRI="#InterOrganizationNetwork1"/>
+        <NamedIndividual IRI="#Organization4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <NamedIndividual IRI="#Interaction1"/>
+        <NamedIndividual IRI="#Orga1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <NamedIndividual IRI="#Interaction1"/>
+        <NamedIndividual IRI="#Orga2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#hasTime"/>
+        <NamedIndividual IRI="#Interaction1"/>
+        <NamedIndividual IRI="#Interval1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <NamedIndividual IRI="#Interaction2"/>
+        <NamedIndividual IRI="#Orga2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <NamedIndividual IRI="#Interaction2"/>
+        <NamedIndividual IRI="#Organization3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#hasBeginning"/>
+        <NamedIndividual IRI="#Interval1"/>
+        <NamedIndividual IRI="#T1Start"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#hasEnd"/>
+        <NamedIndividual IRI="#Interval1"/>
+        <NamedIndividual IRI="#T1End"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+        <NamedIndividual IRI="#Orga1"/>
+        <NamedIndividual IRI="#PlaceOrga1Geo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHead"/>
+        <NamedIndividual IRI="#Orga1"/>
+        <NamedIndividual IRI="#ChiefOrga1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInteraction"/>
+        <NamedIndividual IRI="#Orga1"/>
+        <NamedIndividual IRI="#Orga2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participate"/>
+        <NamedIndividual IRI="#Orga1"/>
+        <NamedIndividual IRI="#Interaction1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHead"/>
+        <NamedIndividual IRI="#Orga2"/>
+        <NamedIndividual IRI="#ChiefOrga2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInteraction"/>
+        <NamedIndividual IRI="#Orga2"/>
+        <NamedIndividual IRI="#Organization3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participate"/>
+        <NamedIndividual IRI="#Orga2"/>
+        <NamedIndividual IRI="#Interaction1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participate"/>
+        <NamedIndividual IRI="#Orga2"/>
+        <NamedIndividual IRI="#Interaction2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+        <NamedIndividual IRI="#Organization3"/>
+        <NamedIndividual IRI="#Place1Geo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHead"/>
+        <NamedIndividual IRI="#Organization3"/>
+        <NamedIndividual IRI="#ChiefOrga3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participate"/>
+        <NamedIndividual IRI="#Organization3"/>
+        <NamedIndividual IRI="#Interaction2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHead"/>
+        <NamedIndividual IRI="#Organization4"/>
+        <NamedIndividual IRI="#ChiefOrga4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLeadershipStyleOf"/>
+        <NamedIndividual IRI="#Participative"/>
+        <NamedIndividual IRI="#ChiefOrga2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLeadershipStyleOf"/>
+        <NamedIndividual IRI="#Participative"/>
+        <NamedIndividual IRI="#ChiefOrga3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+        <NamedIndividual IRI="#Place1"/>
+        <NamedIndividual IRI="#Place1Geo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+        <NamedIndividual IRI="#PlaceOrga1"/>
+        <NamedIndividual IRI="#PlaceOrga1Geo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#TransportingChildrenBrest"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#TransportingChildrenGuipavas"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#TransportingChildrenQuimper"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isComposedOfObjective"/>
+        <NamedIndividual IRI="#associationMairesDeFrance"/>
+        <NamedIndividual IRI="#associationMairesDeFrance13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isComposedOfObjective"/>
+        <NamedIndividual IRI="#associationMairesDeFrance"/>
+        <NamedIndividual IRI="#associationMairesDeFrance29"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#caringAllPatientsBrest"/>
+        <NamedIndividual IRI="#FailedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#caringAllPatientsQuimper"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#caringCovid19PatientsBrest"/>
+        <NamedIndividual IRI="#DisruptedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#caringCovid19PatientsQuimper"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasChief"/>
+        <NamedIndividual IRI="#cityCouncillorMunicipalityBrest"/>
+        <NamedIndividual IRI="#head_Municipality_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isHumanResourceOf"/>
+        <NamedIndividual IRI="#cityCouncillorMunicipalityBrest"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isHumanResourceOf"/>
+        <NamedIndividual IRI="#cityCouncillorMunicipalityBrest"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#cleaningClassroomsBrest"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#cleaningClassroomsGuipavas"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#cleaningClassroomsQuimper"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/NET/c4dm/event.owl#product"/>
+        <NamedIndividual IRI="#covid19CrisisMunicipalityBrest"/>
+        <NamedIndividual IRI="#FunctionalDamage1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToCrisis"/>
+        <NamedIndividual IRI="#covid19CrisisMunicipalityBrest"/>
+        <NamedIndividual IRI="#Covid19_Step1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasBeforeCrisisManagementStatus"/>
+        <NamedIndividual IRI="#covid19CrisisMunicipalityBrest"/>
+        <NamedIndividual IRI="#NonPrepared"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#deployingPoliceBrest"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#deployingPoliceGuipavas"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#deployingPoliceQuimper"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#educatingChildrenBrest"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#educatingChildrenGuipavas"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#educatingChildrenQuimper"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#feedingChildrenBrest"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#feedingChildrenGuipavas"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#feedingChildrenQuimper"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isHeadOf"/>
+        <NamedIndividual IRI="#head_Hospital_Brest"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
+        <NamedIndividual IRI="#head_Hospital_Brest"/>
+        <NamedIndividual IRI="#MedecinsSansFrontieres"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isHeadOf"/>
+        <NamedIndividual IRI="#head_Hospital_Quimper"/>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
+        <NamedIndividual IRI="#head_Hospital_Quimper"/>
+        <NamedIndividual IRI="#MedecinsSansFrontieres"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isHeadOf"/>
+        <NamedIndividual IRI="#head_Municipality_Brest"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
+        <NamedIndividual IRI="#head_Municipality_Brest"/>
+        <NamedIndividual IRI="#associationMairesDeFrance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isHeadOf"/>
+        <NamedIndividual IRI="#head_Municipality_Guipavas"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isHeadOf"/>
+        <NamedIndividual IRI="#head_Municipality_Quimper"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
+        <NamedIndividual IRI="#head_Municipality_Quimper"/>
+        <NamedIndividual IRI="#associationMairesDeFrance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isHeadOf"/>
+        <NamedIndividual IRI="#head_Prefecture_Finistere"/>
+        <NamedIndividual IRI="#prefecture_Finistere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isHeadOf"/>
+        <NamedIndividual IRI="#head_interCo_BMO"/>
+        <NamedIndividual IRI="#interCo_BMO"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#helpingFragileCitizensBrest"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#helpingFragileCitizensGuipavas"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#helpingFragileCitizensQuimper"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#collaborate"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#cooperate"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+        <NamedIndividual IRI="#school_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHead"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+        <NamedIndividual IRI="#head_Hospital_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+        <NamedIndividual IRI="#caringAllPatientsBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+        <NamedIndividual IRI="#caringCovid19PatientsBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+        <NamedIndividual IRI="#ABHSHospitalBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+        <NamedIndividual IRI="#clinicalStaffHospitalBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+        <NamedIndividual IRI="#hospitalBedsHospitalBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+        <NamedIndividual IRI="#maskHospitalBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+        <NamedIndividual IRI="#respiratorsHospitalBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#cooperate"/>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+        <NamedIndividual IRI="#school_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHead"/>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+        <NamedIndividual IRI="#head_Hospital_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+        <NamedIndividual IRI="#caringAllPatientsQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+        <NamedIndividual IRI="#caringCovid19PatientsQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+        <NamedIndividual IRI="#ABHSHospitalQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+        <NamedIndividual IRI="#clinicalStaffHospitalQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+        <NamedIndividual IRI="#hospitalBedsHospitalQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+        <NamedIndividual IRI="#maskHospitalQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+        <NamedIndividual IRI="#respiratorsHospitalQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#hostingChildrenClinicalStaffBrest"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#hostingChildrenClinicalStaffGuipavas"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <NamedIndividual IRI="#hostingChildrenClinicalStaffQuimper"/>
+        <NamedIndividual IRI="#AchievedMissionStatus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#cooperate"/>
+        <NamedIndividual IRI="#interCo_BMO"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHead"/>
+        <NamedIndividual IRI="#interCo_BMO"/>
+        <NamedIndividual IRI="#head_interCo_BMO"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#interCo_BMO"/>
+        <NamedIndividual IRI="#ABHSInterCoBMO"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#interCo_BMO"/>
+        <NamedIndividual IRI="#maskInterCoBMO"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#cooperate"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#cooperate"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#school_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHead"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#head_Municipality_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#TransportingChildrenBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#cleaningClassroomsBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#deployingPoliceBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#feedingChildrenBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#helpingFragileCitizensBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#ABHSMunicipalityBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#busDriverMunicipalityBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#busMunicipalityBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#cleaningStaffMunicipalityBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#cooksMunicipalityBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#maskMunicipalityBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#policeOfficersMunicipalityBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isImpactedBy"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#StormFinistere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isImpactedBy"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#covid19CrisisMunicipalityBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isIndependent"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coordinate"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#school_Guipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHead"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#head_Municipality_Guipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#TransportingChildrenGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#cleaningClassroomsGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#deployingPoliceGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#feedingChildrenGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#helpingFragileCitizensGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#ABHSMunicipalityGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#busDriverMunicipalityGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#busMunicipalityGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#cleaningStaffMunicipalityGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#cooksMunicipalityGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#maskMunicipalityGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#policeOfficersMunicipalityGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isInConflict"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#interCo_BMO"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isInConflict"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isIndependent"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#cooperate"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#cooperate"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#school_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHead"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#head_Municipality_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#TransportingChildrenQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#cleaningClassroomsQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#deployingPoliceQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#feedingChildrenQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#helpingFragileCitizensQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#ABHSMunicipalityQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#busDriverMunicipalityQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#busMunicipalityQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#cleaningStaffMunicipalityQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#cooksMunicipalityQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#maskMunicipalityQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+        <NamedIndividual IRI="#policeOfficersMunicipalityQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#giveAutonomy"/>
+        <NamedIndividual IRI="#prefecture_Finistere"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#giveAutonomy"/>
+        <NamedIndividual IRI="#prefecture_Finistere"/>
+        <NamedIndividual IRI="#municipality_Guipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasControl"/>
+        <NamedIndividual IRI="#prefecture_Finistere"/>
+        <NamedIndividual IRI="#municipality_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHead"/>
+        <NamedIndividual IRI="#prefecture_Finistere"/>
+        <NamedIndividual IRI="#head_Prefecture_Finistere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#prefecture_Finistere"/>
+        <NamedIndividual IRI="#ABHSPrefectureFinistere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#prefecture_Finistere"/>
+        <NamedIndividual IRI="#maskPrefectureFinistere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isInConflict"/>
+        <NamedIndividual IRI="#prefecture_Morbihan"/>
+        <NamedIndividual IRI="#prefecture_Finistere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#collaborate"/>
+        <NamedIndividual IRI="#school_Brest"/>
+        <NamedIndividual IRI="#school_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHead"/>
+        <NamedIndividual IRI="#school_Brest"/>
+        <NamedIndividual IRI="#head_School_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#school_Brest"/>
+        <NamedIndividual IRI="#educatingChildrenBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#school_Brest"/>
+        <NamedIndividual IRI="#hostingChildrenClinicalStaffBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#school_Brest"/>
+        <NamedIndividual IRI="#ABHSSchoolBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#school_Brest"/>
+        <NamedIndividual IRI="#maskSchoolBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#school_Brest"/>
+        <NamedIndividual IRI="#teachersSchoolBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#collaborate"/>
+        <NamedIndividual IRI="#school_Guipavas"/>
+        <NamedIndividual IRI="#school_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHead"/>
+        <NamedIndividual IRI="#school_Guipavas"/>
+        <NamedIndividual IRI="#head_School_Guipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#school_Guipavas"/>
+        <NamedIndividual IRI="#educatingChildrenGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#school_Guipavas"/>
+        <NamedIndividual IRI="#hostingChildrenClinicalStaffGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#school_Guipavas"/>
+        <NamedIndividual IRI="#ABHSSchoolGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#school_Guipavas"/>
+        <NamedIndividual IRI="#maskSchoolGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#school_Guipavas"/>
+        <NamedIndividual IRI="#teachersSchoolGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isIndependent"/>
+        <NamedIndividual IRI="#school_Guipavas"/>
+        <NamedIndividual IRI="#school_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHead"/>
+        <NamedIndividual IRI="#school_Quimper"/>
+        <NamedIndividual IRI="#head_School_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#school_Quimper"/>
+        <NamedIndividual IRI="#educatingChildrenQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMission"/>
+        <NamedIndividual IRI="#school_Quimper"/>
+        <NamedIndividual IRI="#hostingChildrenClinicalStaffQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#school_Quimper"/>
+        <NamedIndividual IRI="#ABHSSchoolQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#school_Quimper"/>
+        <NamedIndividual IRI="#maskSchoolQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#school_Quimper"/>
+        <NamedIndividual IRI="#teachersSchoolQuimper"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#ABHSHospitalBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#ABHSHospitalQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#ABHSInterCoBMO"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#ABHSMunicipalityBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">230</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#ABHSMunicipalityGuipavas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#ABHSMunicipalityQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#ABHSPrefectureFinistere"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#ABHSSchoolBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#ABHSSchoolGuipavas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#ABHSSchoolQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasType"/>
+        <NamedIndividual IRI="#Interaction1"/>
+        <Literal>SharingResource</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasType"/>
+        <NamedIndividual IRI="#Interaction2"/>
+        <Literal>SharingResource</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="geo:asWKT"/>
+        <NamedIndividual IRI="#Place1Geo"/>
+        <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((-4.526367 44.01178, -7.250977 49.713114, 2.241211 52.203566, 9.536133 49.02634, 11.469727 40.165441, 1.538086 40.500433, -4.526367 44.01178))</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="geo:asWKT"/>
+        <NamedIndividual IRI="#PlaceOrga1Geo"/>
+        <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((-4.526367 44.01178, -7.250977 49.713114, 2.241211 52.203566, 11.469727 40.165441, 1.538086 40.500433, -4.526367 44.01178))</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/2006/time#inXSDDate"/>
+        <NamedIndividual IRI="#T1End"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2021-05-03</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/2006/time#inXSDDate"/>
+        <NamedIndividual IRI="#T1Start"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2021-03-17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#busDriverMunicipalityBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#busDriverMunicipalityGuipavas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#busDriverMunicipalityQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#busMunicipalityBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#busMunicipalityGuipavas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#busMunicipalityQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#cleaningStaffMunicipalityBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#cleaningStaffMunicipalityGuipavas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#cleaningStaffMunicipalityQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#clinicalStaffHospitalBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">78</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#clinicalStaffHospitalQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">43</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#cooksMunicipalityBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#cooksMunicipalityGuipavas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#cooksMunicipalityQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#hospitalBedsHospitalBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#hospitalBedsHospitalQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">75</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#maskHospitalBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#maskHospitalQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#maskInterCoBMO"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#maskMunicipalityBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">23</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#maskMunicipalityGuipavas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">75</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#maskMunicipalityQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#maskPrefectureFinistere"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#maskSchoolBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#maskSchoolGuipavas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">36</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#maskSchoolQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#policeOfficersMunicipalityBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#policeOfficersMunicipalityGuipavas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#policeOfficersMunicipalityQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">23</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#respiratorsHospitalBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantity"/>
+        <NamedIndividual IRI="#respiratorsHospitalQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#teachersSchoolBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#teachersSchoolGuipavas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#teachersSchoolQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">23</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#AgreeWithMetaMission"/>
+        <ObjectProperty IRI="#hasMission"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#DisagreeWithMetaMission"/>
+        <ObjectProperty IRI="#hasMission"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#IsInformationalResourceOf"/>
+        <ObjectProperty IRI="#isNonMaterialResourceOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#collaborate"/>
+        <ObjectProperty IRI="#hasPositiveHorizontalInteraction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#cooperate"/>
+        <ObjectProperty IRI="#hasPositiveHorizontalInteraction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#coordinate"/>
+        <ObjectProperty IRI="#hasPositiveHorizontalInteraction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#giveAutonomy"/>
+        <ObjectProperty IRI="#hasVerticalInteraction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#giveDelegation"/>
+        <ObjectProperty IRI="#hasVerticalInteraction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAfterCrisisManagementStatus"/>
+        <ObjectProperty IRI="#hasCrisisManagementStatus"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBeforeCrisisManagementStatus"/>
+        <ObjectProperty IRI="#hasCrisisManagementStatus"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBehavior"/>
+        <ObjectProperty IRI="#hasHumanCapability"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasControl"/>
+        <ObjectProperty IRI="#hasVerticalInteraction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCrisisManagementStatus"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDuringCrisisManagementStatus"/>
+        <ObjectProperty IRI="#hasCrisisManagementStatus"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEnvironmentalDamage"/>
+        <ObjectProperty IRI="#hasDamage"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasFunctionalDamage"/>
+        <ObjectProperty IRI="#hasDamage"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasHead"/>
+        <ObjectProperty IRI="#hasHumanResource"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasHorizontalInteraction"/>
+        <ObjectProperty IRI="#hasInteraction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasHumanCapability"/>
+        <ObjectProperty IRI="#hasCapability"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasHumanDamage"/>
+        <ObjectProperty IRI="#hasDamage"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasHumanResource"/>
+        <ObjectProperty IRI="#hasNonMaterialResource"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasHumanResourceOfMetaOrganization"/>
+        <ObjectProperty IRI="#hasHumanResource"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasInformationResource"/>
+        <ObjectProperty IRI="#hasNonMaterialResource"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasInfrastructuralDamage"/>
+        <ObjectProperty IRI="#hasDamage"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMaterialResource"/>
+        <ObjectProperty IRI="#hasResource"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNegativeHorizontalInteraction"/>
+        <ObjectProperty IRI="#hasHorizontalInteraction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNonMaterialResource"/>
+        <ObjectProperty IRI="#hasResource"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasOrganizationMember"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasOrganizationalCapability"/>
+        <ObjectProperty IRI="#hasCapability"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPositiveHorizontalInteraction"/>
+        <ObjectProperty IRI="#hasHorizontalInteraction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasVerticalInteraction"/>
+        <ObjectProperty IRI="#hasInteraction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isAfterCrisisManagementStatus"/>
+        <ObjectProperty IRI="#isCrisisManagementStatusOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isBeforeCrisisManagementStatus"/>
+        <ObjectProperty IRI="#isCrisisManagementStatusOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isDuringCrisisManagementStatus"/>
+        <ObjectProperty IRI="#isCrisisManagementStatusOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isHeadOf"/>
+        <ObjectProperty IRI="#isHumanResourceOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isHumanResourceOf"/>
+        <ObjectProperty IRI="#isNonMaterialResourceOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+        <ObjectProperty IRI="#isHumanResourceOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isInConflict"/>
+        <ObjectProperty IRI="#hasNegativeHorizontalInteraction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isIndependent"/>
+        <ObjectProperty IRI="#hasNegativeHorizontalInteraction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isMaterialResourceOf"/>
+        <ObjectProperty IRI="#isResourceOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isNonMaterialResourceOf"/>
+        <ObjectProperty IRI="#isResourceOf"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsInformationalResourceOf"/>
+        <ObjectProperty IRI="#hasInformationResource"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#composeMIssion"/>
+        <ObjectProperty IRI="#isComposedOfObjective"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#fulfill"/>
+        <ObjectProperty IRI="#isFulfilledThrough"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasAfterCrisisManagementStatus"/>
+        <ObjectProperty IRI="#isAfterCrisisManagementStatus"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasBeforeCrisisManagementStatus"/>
+        <ObjectProperty IRI="#isBeforeCrisisManagementStatus"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasBehavior"/>
+        <ObjectProperty IRI="#isBehaviorOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasCapability"/>
+        <ObjectProperty IRI="#isCapabilityOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasChief"/>
+        <ObjectProperty IRI="#isChiefOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasCrisisManagementStatus"/>
+        <ObjectProperty IRI="#isCrisisManagementStatusOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasDuringCrisisManagementStatus"/>
+        <ObjectProperty IRI="#isDuringCrisisManagementStatus"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasHead"/>
+        <ObjectProperty IRI="#isHeadOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasHumanCapability"/>
+        <ObjectProperty IRI="#isHumanCapabilityOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasHumanResource"/>
+        <ObjectProperty IRI="#isHumanResourceOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasHumanResourceOfMetaOrganization"/>
+        <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasImpactOn"/>
+        <ObjectProperty IRI="#isImpactedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasLeadershipStyle"/>
+        <ObjectProperty IRI="#isLeadershipStyleOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasMaterialResource"/>
+        <ObjectProperty IRI="#isMaterialResourceOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasMission"/>
+        <ObjectProperty IRI="#isMissionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasNonMaterialResource"/>
+        <ObjectProperty IRI="#isNonMaterialResourceOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasOrganizationMember"/>
+        <ObjectProperty IRI="#isMemberofInterOrganizationNetwork"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasOrganizationalCapability"/>
+        <ObjectProperty IRI="#isOrganizationalCapabilityOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <ObjectProperty IRI="#participate"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasResource"/>
+        <ObjectProperty IRI="#isResourceOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isAssignedToOrganization"/>
+        <ObjectProperty IRI="#isInChargeOfTask"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isComposedOfOrganization"/>
+        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isProvidedBy"/>
+        <ObjectProperty IRI="#sharesResourceWith"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isSharedBy"/>
+        <ObjectProperty IRI="#sharesResource"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isTakenBy"/>
+        <ObjectProperty IRI="#takesDecision"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#OrganizationRelationalCapability"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#PossibleResourceExchange"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#collaborate"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#cooperate"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#coordinate"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isInConflict"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isIndependent"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AgreeWithMetaMission"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#DisagreeWithMetaMission"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#NoneOrganizationRelationalCapability"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#OrganizationRelationalCapability"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#PossibleResourceExchange"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#SameOrganization"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#atTime"/>
+        <Class IRI="#Interaction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsToCrisis"/>
+        <Class IRI="#Crisis"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#composeMIssion"/>
+        <Class IRI="#Objective"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#fulfill"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBehavior"/>
+        <Class IRI="#HumanResource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasChief"/>
+        <Class IRI="#TopLevelManagement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasConvergentObjective"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCrisisManagementStatus"/>
+        <Class IRI="#Crisis"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDamage"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDivergentObjective"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEnvironmentalDamage"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFunctionalDamage"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasHead"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasHumanCapability"/>
+        <Class IRI="#HumanResource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasHumanDamage"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasHumanResource"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasImpactOn"/>
+        <Class IRI="#Crisis"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInformationResource"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInfrastructuralDamage"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInteraction"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInterdependence"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLeadershipStyle"/>
+        <Class IRI="#Chief"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMaterialResource"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <Class IRI="#Mission"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNonMaterialResource"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOrganizationMember"/>
+        <Class IRI="#InterOrganizationNetwork"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOrganizationalCapability"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRelationWith"/>
+        <Class IRI="#HumanResource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasResource"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isComposedOfObjective"/>
+        <Class IRI="#Mission"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isComposedOfOrganization"/>
+        <Class IRI="#MetaOrganization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCrisisManagementStatusOf"/>
+        <Class IRI="#CrisisManagementStatus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+        <Class IRI="#HumanResource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isInChargeOfTask"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLeadershipStyleOf"/>
+        <Class IRI="#LeadershipStyle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isNotSameOrganization"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#participate"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sharesResource"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sharesResourceWith"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#takesDecision"/>
+        <Class IRI="#Chief"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.org/NET/c4dm/event.owl#product"/>
+        <Class IRI="#Damage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AgreeWithMetaMission"/>
+        <Class IRI="#MetaMission"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#DisagreeWithMetaMission"/>
+        <Class IRI="#MetaMission"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#NoneOrganizationRelationalCapability"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#OrganizationRelationalCapability"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#PossibleResourceExchange"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#SameOrganization"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#atTime"/>
+        <Class IRI="http://www.w3.org/2006/time#TemporalEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsToCrisis"/>
+        <Class IRI="#Crisis"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#composeMIssion"/>
+        <Class IRI="#Mission"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fulfill"/>
+        <Class IRI="#Objective"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAfterCrisisManagementStatus"/>
+        <Class IRI="#AfterCrisisStatus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBeforeCrisisManagementStatus"/>
+        <Class IRI="#BeforeCrisisStatus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBehavior"/>
+        <Class IRI="#BehaviorCapability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasChief"/>
+        <Class IRI="#Chief"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasConvergentObjective"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCrisisManagementStatus"/>
+        <Class IRI="#CrisisManagementStatus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDamage"/>
+        <Class IRI="#Damage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDivergentObjective"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDuringCrisisManagementStatus"/>
+        <Class IRI="#DuringCrisisStatus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEnvironmentalDamage"/>
+        <Class IRI="#EnvironmentalDamage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFunctionalDamage"/>
+        <Class IRI="#FunctionalDamage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasHead"/>
+        <Class IRI="#Chief"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasHumanCapability"/>
+        <Class IRI="#HumanCapability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasHumanDamage"/>
+        <Class IRI="#HumanDamage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasHumanResource"/>
+        <Class IRI="#HumanResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasImpactOn"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInformationResource"/>
+        <Class IRI="#InformationalResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInfrastructuralDamage"/>
+        <Class IRI="#InfrastructuralDamage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInteraction"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInterdependence"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLeadershipStyle"/>
+        <Class IRI="#LeadershipStyle"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMaterialResource"/>
+        <Class IRI="#MaterialResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMissionStatus"/>
+        <Class IRI="#MissionStatus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNonMaterialResource"/>
+        <Class IRI="#NonMaterialResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOrganizationMember"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOrganizationalCapability"/>
+        <Class IRI="#OrganizationalCapability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRelationWith"/>
+        <Class IRI="#HumanResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasResource"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isComposedOfObjective"/>
+        <Class IRI="#Objective"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isComposedOfOrganization"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCrisisManagementStatusOf"/>
+        <Class IRI="#Crisis"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+        <Class IRI="#MetaOrganization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isInChargeOfTask"/>
+        <Class IRI="#Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLeadershipStyleOf"/>
+        <Class IRI="#Chief"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
+        <Class IRI="#MetaOrganization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isNotSameOrganization"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#participate"/>
+        <Class IRI="#Interaction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sharesResource"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sharesResourceWith"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#takesDecision"/>
+        <Class IRI="#Decision"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasQuantity"/>
+        <Class IRI="#MaterialResource"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasType"/>
+        <Class IRI="#Interaction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasValue"/>
+        <Class IRI="#HumanResource"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasQuantity"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasValue"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#BoundarySpanner"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOf"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOf"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </DifferentIndividualsAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#PossibleResourceExchange"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S5</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Chief"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOf"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOf"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </DifferentIndividualsAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#BoundarySpanner"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S2</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasHead"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Chief"/>
+                <Variable IRI="#y"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOf"/>
+                <Variable IRI="#z"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#TopLevelManagement"/>
+                <Variable IRI="#z"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasChief"/>
+                <Variable IRI="#z"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S4</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#TopLevelManagement"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasChief"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHeadOf"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasHumanResource"/>
+                <Variable IRI="#z"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S9</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#TopLevelManagement"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOf"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isComposedOfOrganization"/>
+                <Variable IRI="#z"/>
+                <Variable IRI="#w"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#PossibleResourceExchange"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#w"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S7</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <Variable IRI="#x1"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <Variable IRI="#x2"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#TopLevelManagement"/>
+                <Variable IRI="#x1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOf"/>
+                <Variable IRI="#x1"/>
+                <Variable IRI="#y1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#TopLevelManagement"/>
+                <Variable IRI="#x2"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOf"/>
+                <Variable IRI="#x2"/>
+                <Variable IRI="#y2"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#PossibleResourceExchange"/>
+                <Variable IRI="#y1"/>
+                <Variable IRI="#y2"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S8</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isComposedOfOrganization"/>
+                <Variable IRI="#z"/>
+                <Variable IRI="#w"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHeadOf"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#PossibleResourceExchange"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#w"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S6</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <Variable IRI="#x1"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <Variable IRI="#x2"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHeadOf"/>
+                <Variable IRI="#x1"/>
+                <Variable IRI="#y1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHeadOf"/>
+                <Variable IRI="#x2"/>
+                <Variable IRI="#y2"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#PossibleResourceExchange"/>
+                <Variable IRI="#y1"/>
+                <Variable IRI="#y2"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S1</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isMemberofInterOrganizationNetwork"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isMemberofInterOrganizationNetwork"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </DifferentIndividualsAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#PossibleResourceExchange"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Covid19_Step1</IRI>
+        <Literal>Covid19 Crisis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interOrganizationNetwork_1</IRI>
+        <Literal>Finistere</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

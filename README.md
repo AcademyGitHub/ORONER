@@ -3,7 +3,7 @@
 2) ORONER (Competency questions).pdf is the file that contains the answers to competency questions.
 
 # Authors :
-- Mohamed Ayoub Laouni (1,2) orcidID{0009-0007-4603-0060}
+<!-- - Mohamed Ayoub Laouni (1,2) orcidID{0009-0007-4603-0060} -->
 - Marisnel Olivares (1) orcidID{0000-0002-0923-1660}
 - Eric Saux (1) orcidID{0000-0002-6685-6106}
 - José-Luis Vilchis-Medina (1) orcidID{0000-0001-5724-5920}}

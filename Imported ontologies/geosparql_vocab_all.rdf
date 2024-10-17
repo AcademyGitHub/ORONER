@@ -1,0 +1,1129 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY geo "http://www.opengis.net/ont/geosparql#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.opengis.net/ont/geosparql#"
+     xml:base="http://www.opengis.net/ont/geosparql"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:geo="http://www.opengis.net/ont/geosparql#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.opengis.net/ont/geosparql">
+        <dc:date rdf:datatype="&xsd;date">2012-04-30</dc:date>
+        <dc:description rdf:datatype="&xsd;string">An RDF/OWL vocabulary for representing spatial information</dc:description>
+        <owl:versionInfo rdf:datatype="&xsd;string">OGC GeoSPARQL 1.0</owl:versionInfo>
+        <dc:source rdf:datatype="&xsd;string">OGC GeoSPARQL – A Geographic Query Language for RDF Data OGC 11-052r5</dc:source>
+        <dc:creator rdf:datatype="&xsd;string">Open Geospatial Consortium</dc:creator>
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:seeAlso rdf:resource="http://www.opengis.net/def/function/ogc-geosparql/1.0"/>
+        <rdfs:seeAlso rdf:resource="http://www.opengis.net/def/rule/ogc-geosparql/1.0"/>
+        <dc:source rdf:resource="http://www.opengis.net/doc/IS/geosparql/1.0"/>
+        <rdfs:seeAlso rdf:resource="http://www.opengis.net/doc/IS/geosparql/1.0"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/gml"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    <owl:AnnotationProperty rdf:about="&skos;prefLabel"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&dc;contributor"/>
+    <owl:AnnotationProperty rdf:about="&skos;definition"/>
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#gmlLiteral -->
+
+    <rdfs:Datatype rdf:about="&geo;gmlLiteral">
+        <rdfs:label xml:lang="en">GML Literal</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:description xml:lang="en">
+      A GML serialization of a geometry object.
+    </dc:description>
+        <skos:definition xml:lang="en">
+      A GML serialization of a geometry object.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      A GML serialization of a geometry object.
+    </rdfs:comment>
+        <skos:prefLabel xml:lang="en">GML Literal</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#wktLiteral -->
+
+    <rdfs:Datatype rdf:about="&geo;wktLiteral">
+        <rdfs:label xml:lang="en">Well-known Text Literal</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      A Well-known Text serialization of a geometry object.
+    </dc:description>
+        <skos:definition xml:lang="en">
+      A Well-known Text serialization of a geometry object.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      A Well-known Text serialization of a geometry object.
+    </rdfs:comment>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">Well-known Text Literal</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#defaultGeometry -->
+
+    <owl:ObjectProperty rdf:about="&geo;defaultGeometry">
+        <rdfs:label xml:lang="en">defaultGeometry</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:definition xml:lang="en">
+      The default geometry to be used in spatial calculations.
+      It is Usually the most detailed geometry.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      The default geometry to be used in spatial calculations.
+      It is Usually the most detailed geometry.
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      The default geometry to be used in spatial calculations.
+      It is Usually the most detailed geometry.
+    </dc:description>
+        <skos:prefLabel xml:lang="en">defaultGeometry</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geo;Feature"/>
+        <rdfs:range rdf:resource="&geo;Geometry"/>
+        <rdfs:subPropertyOf rdf:resource="&geo;hasGeometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehContains -->
+
+    <owl:ObjectProperty rdf:about="&geo;ehContains">
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*TFF*FF*
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*TFF*FF*
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*TFF*FF*
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">contains</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehCoveredBy -->
+
+    <owl:ObjectProperty rdf:about="&geo;ehCoveredBy">
+        <rdfs:label xml:lang="en">coveredBy</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFF*TFT**
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFF*TFT**
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFF*TFT**
+    </dc:description>
+        <skos:prefLabel xml:lang="en">coveredBy</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehCovers -->
+
+    <owl:ObjectProperty rdf:about="&geo;ehCovers">
+        <rdfs:label xml:lang="en">covers</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: T*TFT*FF*
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: T*TFT*FF*
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: T*TFT*FF*
+    </rdfs:comment>
+        <skos:prefLabel xml:lang="en">covers</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehDisjoint -->
+
+    <owl:ObjectProperty rdf:about="&geo;ehDisjoint">
+        <rdfs:label xml:lang="en">disjoint</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </rdfs:comment>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">disjoint</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehEquals -->
+
+    <owl:ObjectProperty rdf:about="&geo;ehEquals">
+        <rdfs:label xml:lang="en">equals</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </dc:description>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">equals</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehInside -->
+
+    <owl:ObjectProperty rdf:about="&geo;ehInside">
+        <rdfs:label xml:lang="en">inside</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFF*FFT**
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFF*FFT**
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFF*FFT**
+    </rdfs:comment>
+        <skos:prefLabel xml:lang="en">inside</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehMeet -->
+
+    <owl:ObjectProperty rdf:about="&geo;ehMeet">
+        <rdfs:label xml:lang="en">meet</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. 
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. 
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </dc:description>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. 
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">meet</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehOverlap -->
+
+    <owl:ObjectProperty rdf:about="&geo;ehOverlap">
+        <rdfs:label xml:lang="en">overlap</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T**
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T**
+    </dc:description>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T**
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">overlap</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
+
+    <owl:ObjectProperty rdf:about="&geo;hasGeometry">
+        <rdfs:label xml:lang="en">hasGeometry</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:description xml:lang="en">
+      A spatial representation for a given feature.
+    </dc:description>
+        <skos:definition xml:lang="en">
+      A spatial representation for a given feature.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      A spatial representation for a given feature.
+    </rdfs:comment>
+        <skos:prefLabel xml:lang="en">hasGeometry</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geo;Feature"/>
+        <rdfs:range rdf:resource="&geo;Geometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8dc -->
+
+    <owl:ObjectProperty rdf:about="&geo;rcc8dc">
+        <rdfs:label xml:lang="en">disconnected</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FFTFFTTTT
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FFTFFTTTT
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint
+      from the object SpatialObject. DE-9IM: FFTFFTTTT
+    </dc:description>
+        <skos:prefLabel xml:lang="en">disconnected</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ec -->
+
+    <owl:ObjectProperty rdf:about="&geo;rcc8ec">
+        <rdfs:label xml:lang="en">externally connected</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. DE-9IM: FFTFTTTTT
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. DE-9IM: FFTFTTTTT
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially meets the 
+      object SpatialObject. DE-9IM: FFTFTTTTT
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">externally connected</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8eq -->
+
+    <owl:ObjectProperty rdf:about="&geo;rcc8eq">
+        <rdfs:label xml:lang="en">equals</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </dc:description>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </rdfs:comment>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">equals</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ntpp -->
+
+    <owl:ObjectProperty rdf:about="&geo;rcc8ntpp">
+        <rdfs:label xml:lang="en">non-tangential proper part</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFFTFFTTT
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFFTFFTTT
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially inside 
+      the object SpatialObject. DE-9IM: TFFTFFTTT
+    </rdfs:comment>
+        <skos:prefLabel xml:lang="en">non-tangential proper part</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ntppi -->
+
+    <owl:ObjectProperty rdf:about="&geo;rcc8ntppi">
+        <rdfs:label xml:lang="en">non-tangential proper part inverse</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: TTTFFTFFT
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: TTTFFTFFT
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: TTTFFTFFT
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">non-tangential proper part inverse</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8po -->
+
+    <owl:ObjectProperty rdf:about="&geo;rcc8po">
+        <rdfs:label xml:lang="en">partially overlapping</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: TTTTTTTTT
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: TTTTTTTTT
+    </dc:description>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: TTTTTTTTT
+    </skos:definition>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">partially overlapping</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8tpp -->
+
+    <owl:ObjectProperty rdf:about="&geo;rcc8tpp">
+        <rdfs:label xml:lang="en">tangential proper part</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFFTTFTTT
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFFTTFTTT
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially covered 
+      by the object SpatialObject. DE-9IM: TFFTTFTTT
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">tangential proper part</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8tppi -->
+
+    <owl:ObjectProperty rdf:about="&geo;rcc8tppi">
+        <rdfs:label xml:lang="en">tangential proper part inverse</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: TTTFTTFFT
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: TTTFTTFFT
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially covers the 
+      object SpatialObject. DE-9IM: TTTFTTFFT
+    </rdfs:comment>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">tangential proper part inverse</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfContains -->
+
+    <owl:ObjectProperty rdf:about="&geo;sfContains">
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially contains the 
+      object SpatialObject. DE-9IM: T*****FF*
+    </skos:definition>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">contains</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfCrosses -->
+
+    <owl:ObjectProperty rdf:about="&geo;sfCrosses">
+        <rdfs:label xml:lang="en">crosses</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially crosses the 
+      object SpatialObject. DE-9IM: T*T******
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially crosses the 
+      object SpatialObject. DE-9IM: T*T******
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially crosses the 
+      object SpatialObject. DE-9IM: T*T******
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">crosses</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfDisjoint -->
+
+    <owl:ObjectProperty rdf:about="&geo;sfDisjoint">
+        <rdfs:label xml:lang="en">disjoint</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint 
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint 
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </dc:description>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially disjoint 
+      from the object SpatialObject. DE-9IM: FF*FF****
+    </skos:definition>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">disjoint</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfEquals -->
+
+    <owl:ObjectProperty rdf:about="&geo;sfEquals">
+        <rdfs:label xml:lang="en">equals</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially equals the 
+      object SpatialObject. DE-9IM: TFFFTFFFT
+    </dc:description>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">equals</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfIntersects -->
+
+    <owl:ObjectProperty rdf:about="&geo;sfIntersects">
+        <rdfs:label xml:lang="en">intersects</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is not spatially disjoint 
+      from the object SpatialObject.
+      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** 
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is not spatially disjoint 
+      from the object SpatialObject.
+      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** 
+    </skos:definition>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is not spatially disjoint 
+      from the object SpatialObject.
+      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** 
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">intersects</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfOverlaps -->
+
+    <owl:ObjectProperty rdf:about="&geo;sfOverlaps">
+        <rdfs:label xml:lang="en">overlaps</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T** 
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T** 
+    </dc:description>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially overlaps the 
+      object SpatialObject. DE-9IM: T*T***T** 
+    </skos:definition>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">overlaps</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfTouches -->
+
+    <owl:ObjectProperty rdf:about="&geo;sfTouches">
+        <rdfs:label xml:lang="en">touches</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject spatially touches the 
+      object SpatialObject.
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </dc:description>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject spatially touches the 
+      object SpatialObject.
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </skos:definition>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject spatially touches the 
+      object SpatialObject.
+      DE-9IM: FT******* ^ F**T***** ^ F***T****
+    </rdfs:comment>
+        <skos:prefLabel xml:lang="en">touches</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfWithin -->
+
+    <owl:ObjectProperty rdf:about="&geo;sfWithin">
+        <rdfs:label xml:lang="en">within</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:description xml:lang="en">
+      Exists if the subject SpatialObject is spatially within the 
+      object SpatialObject. DE-9IM: T*F**F***
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Exists if the subject SpatialObject is spatially within the 
+      object SpatialObject. DE-9IM: T*F**F***
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      Exists if the subject SpatialObject is spatially within the 
+      object SpatialObject. DE-9IM: T*F**F***
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">within</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#asGML -->
+
+    <owl:DatatypeProperty rdf:about="&geo;asGML">
+        <rdfs:label xml:lang="en">asGML</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:description xml:lang="en">
+      The GML serialization of a geometry
+    </dc:description>
+        <skos:definition xml:lang="en">
+      The GML serialization of a geometry
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      The GML serialization of a geometry
+    </rdfs:comment>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:prefLabel xml:lang="en">asGML</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geo;Geometry"/>
+        <rdfs:range rdf:resource="&geo;gmlLiteral"/>
+        <rdfs:subPropertyOf rdf:resource="&geo;hasSerialization"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#asWKT -->
+
+    <owl:DatatypeProperty rdf:about="&geo;asWKT">
+        <rdfs:label xml:lang="en">asWKT</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:description xml:lang="en">
+      The WKT serialization of a geometry
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      The WKT serialization of a geometry
+    </rdfs:comment>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:definition xml:lang="en">
+      The WKT serialization of a geometry
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">asWKT</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geo;Geometry"/>
+        <rdfs:subPropertyOf rdf:resource="&geo;hasSerialization"/>
+        <rdfs:range rdf:resource="&geo;wktLiteral"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#coordinateDimension -->
+
+    <owl:DatatypeProperty rdf:about="&geo;coordinateDimension">
+        <rdfs:label xml:lang="en">coordinateDimension</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:description xml:lang="en">
+      The number of measurements or axes needed to describe the position of this
+      geometry in a coordinate system.
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      The number of measurements or axes needed to describe the position of this
+      geometry in a coordinate system.
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      The number of measurements or axes needed to describe the position of this
+      geometry in a coordinate system.
+    </skos:definition>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:prefLabel xml:lang="en">coordinateDimension</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geo;Geometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#dimension -->
+
+    <owl:DatatypeProperty rdf:about="&geo;dimension">
+        <rdfs:label xml:lang="en">dimension</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <rdfs:comment xml:lang="en">
+      The topological dimension of this geometric object, which 
+      must be less than or equal to the coordinate dimension. 
+      In non-homogeneous collections, this will return the largest 
+      topological dimension of the contained objects.
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      The topological dimension of this geometric object, which 
+      must be less than or equal to the coordinate dimension. 
+      In non-homogeneous collections, this will return the largest 
+      topological dimension of the contained objects.
+    </dc:description>
+        <skos:definition xml:lang="en">
+      The topological dimension of this geometric object, which 
+      must be less than or equal to the coordinate dimension. 
+      In non-homogeneous collections, this will return the largest 
+      topological dimension of the contained objects.
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">dimension</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geo;Geometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasSerialization -->
+
+    <owl:DatatypeProperty rdf:about="&geo;hasSerialization">
+        <rdfs:label xml:lang="en">has serialization</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:description xml:lang="en">
+      Connects a geometry object with its text-based serialization.
+    </dc:description>
+        <rdfs:comment xml:lang="en">
+      Connects a geometry object with its text-based serialization.
+    </rdfs:comment>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      Connects a geometry object with its text-based serialization.
+    </skos:definition>
+        <skos:prefLabel xml:lang="en">has serialization</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geo;Geometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#isEmpty -->
+
+    <owl:DatatypeProperty rdf:about="&geo;isEmpty">
+        <rdfs:label xml:lang="en">isEmpty</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      (true) if this geometric object is the empty Geometry. If 
+      true, then this geometric object represents the empty point 
+      set for the coordinate space.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      (true) if this geometric object is the empty Geometry. If 
+      true, then this geometric object represents the empty point 
+      set for the coordinate space.
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      (true) if this geometric object is the empty Geometry. If 
+      true, then this geometric object represents the empty point 
+      set for the coordinate space.
+    </dc:description>
+        <skos:prefLabel xml:lang="en">isEmpty</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geo;Geometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#isSimple -->
+
+    <owl:DatatypeProperty rdf:about="&geo;isSimple">
+        <rdfs:label xml:lang="en">isSimple</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      (true) if this geometric object has no anomalous geometric 
+      points, such as self intersection or self tangency.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      (true) if this geometric object has no anomalous geometric 
+      points, such as self intersection or self tangency.
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      (true) if this geometric object has no anomalous geometric 
+      points, such as self intersection or self tangency.
+    </dc:description>
+        <skos:prefLabel xml:lang="en">isSimple</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geo;Geometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#spatialDimension -->
+
+    <owl:DatatypeProperty rdf:about="&geo;spatialDimension">
+        <rdfs:label xml:lang="en">spatialDimension</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <skos:definition xml:lang="en">
+      The number of measurements or axes needed to describe the spatial position of 
+      this geometry in a coordinate system.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      The number of measurements or axes needed to describe the spatial position of 
+      this geometry in a coordinate system.
+    </rdfs:comment>
+        <dc:description xml:lang="en">
+      The number of measurements or axes needed to describe the spatial position of 
+      this geometry in a coordinate system.
+    </dc:description>
+        <skos:prefLabel xml:lang="en">spatialDimension</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:domain rdf:resource="&geo;Geometry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+    <owl:Class rdf:about="&geo;Feature">
+        <rdfs:label xml:lang="en">Feature</rdfs:label>
+        <owl:disjointWith rdf:resource="&geo;Geometry"/>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <rdfs:comment xml:lang="en">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </rdfs:comment>
+        <skos:definition xml:lang="en">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </skos:definition>
+        <dc:description xml:lang="en">
+      This class represents the top-level feature type. This class is 
+      equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
+      superclass of all feature types.
+    </dc:description>
+        <skos:prefLabel xml:lang="en">Feature</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Geometry -->
+
+    <owl:Class rdf:about="&geo;Geometry">
+        <rdfs:label xml:lang="en">Geometry</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">2011-06-16</dc:date>
+        <dc:creator>OGC GeoSPARQL 1.0 Standard Working Group</dc:creator>
+        <skos:definition xml:lang="en">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </skos:definition>
+        <rdfs:comment xml:lang="en">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </rdfs:comment>
+        <skos:prefLabel xml:lang="en">Geometry</skos:prefLabel>
+        <dc:contributor>Matthew Perry</dc:contributor>
+        <dc:description xml:lang="en">
+      The class represents the top-level geometry type. This class is 
+      equivalent to the UML class GM_Object defined in ISO 19107, and 
+      it is superclass of all geometry types.
+    </dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

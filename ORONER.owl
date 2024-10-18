@@ -292,7 +292,7 @@
         <ObjectProperty IRI="#OrganizationRelationalCapability"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#PossibleResourceExchange"/>
+        <ObjectProperty IRI="#PossibleResourceSharing"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#SameOrganization"/>
@@ -1110,6 +1110,10 @@
                 <Class IRI="#Chief"/>
             </ObjectSomeValuesFrom>
             <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasInteraction"/>
+                <Class IRI="#Organization"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hasMission"/>
                 <Class IRI="#Mission"/>
             </ObjectSomeValuesFrom>
@@ -1117,10 +1121,6 @@
                 <ObjectProperty IRI="#hasResource"/>
                 <Class IRI="#Resource"/>
             </ObjectSomeValuesFrom>
-            <ObjectMinCardinality cardinality="1">
-                <ObjectProperty IRI="#hasInteraction"/>
-                <Class IRI="#Organization"/>
-            </ObjectMinCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -3484,7 +3484,7 @@
         <ObjectProperty IRI="#OrganizationRelationalCapability"/>
     </SymmetricObjectProperty>
     <SymmetricObjectProperty>
-        <ObjectProperty IRI="#PossibleResourceExchange"/>
+        <ObjectProperty IRI="#PossibleResourceSharing"/>
     </SymmetricObjectProperty>
     <SymmetricObjectProperty>
         <ObjectProperty IRI="#collaborate"/>
@@ -3501,6 +3501,12 @@
     <SymmetricObjectProperty>
         <ObjectProperty IRI="#isIndependent"/>
     </SymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#PossibleResourceSharing"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasInteraction"/>
+    </IrreflexiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#AgreeWithMetaMission"/>
         <Class IRI="#Organization"/>
@@ -3518,7 +3524,7 @@
         <Class IRI="#Organization"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#PossibleResourceExchange"/>
+        <ObjectProperty IRI="#PossibleResourceSharing"/>
         <Class IRI="#Organization"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -3710,7 +3716,7 @@
         <Class IRI="#Organization"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#PossibleResourceExchange"/>
+        <ObjectProperty IRI="#PossibleResourceSharing"/>
         <Class IRI="#Organization"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -3928,7 +3934,7 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>S3</Literal>
+            <Literal>R8</Literal>
         </Annotation>
         <Body>
             <ClassAtom>
@@ -3952,7 +3958,7 @@
         </Body>
         <Head>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#PossibleResourceExchange"/>
+                <ObjectProperty IRI="#PossibleResourceSharing"/>
                 <Variable IRI="#y"/>
                 <Variable IRI="#z"/>
             </ObjectPropertyAtom>
@@ -3969,7 +3975,7 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>S5</Literal>
+            <Literal>R11</Literal>
         </Annotation>
         <Body>
             <ClassAtom>
@@ -4009,7 +4015,7 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>S2</Literal>
+            <Literal>R9</Literal>
         </Annotation>
         <Body>
             <ObjectPropertyAtom>
@@ -4050,7 +4056,130 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>S4</Literal>
+            <Literal>R3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#MetaOrganization"/>
+                <Variable IRI="#z"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isComposedOfOrganization"/>
+                <Variable IRI="#z"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isComposedOfOrganization"/>
+                <Variable IRI="#z"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </DifferentIndividualsAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#PossibleResourceSharing"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>R2</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Organization"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Organization"/>
+                <Variable IRI="#y"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasHorizontalInteraction"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasMission"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#m"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasMission"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#m"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#PossibleResourceSharing"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>R1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Organization"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Organization"/>
+                <Variable IRI="#y"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasPositiveHorizontalInteraction"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#PossibleResourceSharing"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>R10</Literal>
         </Annotation>
         <Body>
             <ClassAtom>
@@ -4087,7 +4216,7 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>S9</Literal>
+            <Literal>R7</Literal>
         </Annotation>
         <Body>
             <ObjectPropertyAtom>
@@ -4108,182 +4237,161 @@
                 <ObjectProperty IRI="#isComposedOfOrganization"/>
                 <Variable IRI="#z"/>
                 <Variable IRI="#w"/>
-            </ObjectPropertyAtom>
-        </Body>
-        <Head>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#PossibleResourceExchange"/>
-                <Variable IRI="#y"/>
-                <Variable IRI="#w"/>
-            </ObjectPropertyAtom>
-        </Head>
-    </DLSafeRule>
-    <DLSafeRule>
-        <Annotation>
-            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal></Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>S7</Literal>
-        </Annotation>
-        <Body>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
-                <Variable IRI="#x1"/>
-                <Variable IRI="#z"/>
-            </ObjectPropertyAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
-                <Variable IRI="#x2"/>
-                <Variable IRI="#z"/>
-            </ObjectPropertyAtom>
-            <ClassAtom>
-                <Class IRI="#TopLevelManagement"/>
-                <Variable IRI="#x1"/>
-            </ClassAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isHumanResourceOf"/>
-                <Variable IRI="#x1"/>
-                <Variable IRI="#y1"/>
-            </ObjectPropertyAtom>
-            <ClassAtom>
-                <Class IRI="#TopLevelManagement"/>
-                <Variable IRI="#x2"/>
-            </ClassAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isHumanResourceOf"/>
-                <Variable IRI="#x2"/>
-                <Variable IRI="#y2"/>
-            </ObjectPropertyAtom>
-        </Body>
-        <Head>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#PossibleResourceExchange"/>
-                <Variable IRI="#y1"/>
-                <Variable IRI="#y2"/>
-            </ObjectPropertyAtom>
-        </Head>
-    </DLSafeRule>
-    <DLSafeRule>
-        <Annotation>
-            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal></Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>S8</Literal>
-        </Annotation>
-        <Body>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
-                <Variable IRI="#x"/>
-                <Variable IRI="#z"/>
-            </ObjectPropertyAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isComposedOfOrganization"/>
-                <Variable IRI="#z"/>
-                <Variable IRI="#w"/>
-            </ObjectPropertyAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isHeadOf"/>
-                <Variable IRI="#x"/>
-                <Variable IRI="#y"/>
-            </ObjectPropertyAtom>
-        </Body>
-        <Head>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#PossibleResourceExchange"/>
-                <Variable IRI="#y"/>
-                <Variable IRI="#w"/>
-            </ObjectPropertyAtom>
-        </Head>
-    </DLSafeRule>
-    <DLSafeRule>
-        <Annotation>
-            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal></Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>S6</Literal>
-        </Annotation>
-        <Body>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
-                <Variable IRI="#x1"/>
-                <Variable IRI="#z"/>
-            </ObjectPropertyAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
-                <Variable IRI="#x2"/>
-                <Variable IRI="#z"/>
-            </ObjectPropertyAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isHeadOf"/>
-                <Variable IRI="#x1"/>
-                <Variable IRI="#y1"/>
-            </ObjectPropertyAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isHeadOf"/>
-                <Variable IRI="#x2"/>
-                <Variable IRI="#y2"/>
-            </ObjectPropertyAtom>
-        </Body>
-        <Head>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#PossibleResourceExchange"/>
-                <Variable IRI="#y1"/>
-                <Variable IRI="#y2"/>
-            </ObjectPropertyAtom>
-        </Head>
-    </DLSafeRule>
-    <DLSafeRule>
-        <Annotation>
-            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal></Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>S1</Literal>
-        </Annotation>
-        <Body>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isMemberofInterOrganizationNetwork"/>
-                <Variable IRI="#x"/>
-                <Variable IRI="#z"/>
-            </ObjectPropertyAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isMemberofInterOrganizationNetwork"/>
-                <Variable IRI="#y"/>
-                <Variable IRI="#z"/>
             </ObjectPropertyAtom>
             <DifferentIndividualsAtom>
-                <Variable IRI="#x"/>
                 <Variable IRI="#y"/>
+                <Variable IRI="#w"/>
             </DifferentIndividualsAtom>
         </Body>
         <Head>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#PossibleResourceExchange"/>
+                <ObjectProperty IRI="#PossibleResourceSharing"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#w"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>R6</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <Variable IRI="#x1"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <Variable IRI="#x2"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#TopLevelManagement"/>
+                <Variable IRI="#x1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOf"/>
+                <Variable IRI="#x1"/>
+                <Variable IRI="#y1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#TopLevelManagement"/>
+                <Variable IRI="#x2"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOf"/>
+                <Variable IRI="#x2"/>
+                <Variable IRI="#y2"/>
+            </ObjectPropertyAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="#y1"/>
+                <Variable IRI="#y2"/>
+            </DifferentIndividualsAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#PossibleResourceSharing"/>
+                <Variable IRI="#y1"/>
+                <Variable IRI="#y2"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>R5</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isComposedOfOrganization"/>
+                <Variable IRI="#z"/>
+                <Variable IRI="#w"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHeadOf"/>
                 <Variable IRI="#x"/>
                 <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="#y"/>
+                <Variable IRI="#w"/>
+            </DifferentIndividualsAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#PossibleResourceSharing"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#w"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>R4</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <Variable IRI="#x1"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <Variable IRI="#x2"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHeadOf"/>
+                <Variable IRI="#x1"/>
+                <Variable IRI="#y1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHeadOf"/>
+                <Variable IRI="#x2"/>
+                <Variable IRI="#y2"/>
+            </ObjectPropertyAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="#y1"/>
+                <Variable IRI="#y2"/>
+            </DifferentIndividualsAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#PossibleResourceSharing"/>
+                <Variable IRI="#y1"/>
+                <Variable IRI="#y2"/>
             </ObjectPropertyAtom>
         </Head>
     </DLSafeRule>

@@ -19,7 +19,16 @@
     <Import>http://www.opengis.net/ont/geosparql</Import>
     <Import>http://www.w3.org/2006/time#2016</Import>
     <Declaration>
+        <Class IRI="http://purl.org/NET/c4dm/event.owl#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/NET/c4dm/event.owl#Factor"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="geo:Feature"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="geo:Geometry"/>
     </Declaration>
     <Declaration>
         <Class IRI="#AdministrativeMission"/>
@@ -250,6 +259,9 @@
         <Class IRI="#SocialMission"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Students"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#SurgicalMasks"/>
     </Declaration>
     <Declaration>
@@ -275,6 +287,21 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Union"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/NET/c4dm/event.owl#factor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/NET/c4dm/event.owl#place"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/NET/c4dm/event.owl#product"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/NET/c4dm/event.owl#time"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#AgreeWithMetaMission"/>
@@ -544,6 +571,15 @@
         <ObjectProperty IRI="#takesDecision"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="geo:asWKT"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAvailableQuantity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAvailableValue"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasQuantity"/>
     </Declaration>
     <Declaration>
@@ -655,7 +691,13 @@
         <NamedIndividual IRI="#Interaction2"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Interaction3"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Interval1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Interval2"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#MedecinsSansFrontieres"/>
@@ -691,6 +733,18 @@
         <NamedIndividual IRI="#PlaceOrga1Geo"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#PlaceSchoolBrestGeo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PlaceSchoolGuipavasGeo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PlaceSchoolPlabennecGeo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PlaceSchoolQuimperGeo"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Prepared"/>
     </Declaration>
     <Declaration>
@@ -710,6 +764,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#T1Start"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#T2End"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#T2Start"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Thing1"/>
@@ -964,7 +1024,22 @@
         <NamedIndividual IRI="#school_Guipavas"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#school_Plabennec"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#school_Quimper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#studentsSchoolBrest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#studentsSchoolGuipavas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#studentsSchoolPlabennec"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#studentsSchoolQuimper"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#teachersSchoolBrest"/>
@@ -973,10 +1048,19 @@
         <NamedIndividual IRI="#teachersSchoolGuipavas"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#teachersSchoolPlabennec"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#teachersSchoolQuimper"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="geo:wktLiteral"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#AdministrativeMission"/>
@@ -1070,7 +1154,7 @@
         <ObjectIntersectionOf>
             <Class IRI="#Organization"/>
             <ObjectMinCardinality cardinality="2">
-                <ObjectProperty IRI="#isComposedOfObjective"/>
+                <ObjectProperty IRI="#isComposedOfOrganization"/>
                 <Class IRI="#Organization"/>
             </ObjectMinCardinality>
         </ObjectIntersectionOf>
@@ -1384,6 +1468,10 @@
         <Class IRI="#CitizenMission"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Students"/>
+        <Class IRI="#HumanResource"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#SurgicalMasks"/>
         <Class IRI="#MaterialResource"/>
     </SubClassOf>
@@ -1496,10 +1584,6 @@
         <NamedIndividual IRI="#AchievedTaskStatus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#BoundarySpanner"/>
-        <NamedIndividual IRI="#ChiefOrga1"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Chief"/>
         <NamedIndividual IRI="#ChiefOrga1"/>
     </ClassAssertion>
@@ -1580,8 +1664,16 @@
         <NamedIndividual IRI="#Interaction2"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Interaction"/>
+        <NamedIndividual IRI="#Interaction3"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://www.w3.org/2006/time#Interval"/>
         <NamedIndividual IRI="#Interval1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2006/time#Interval"/>
+        <NamedIndividual IRI="#Interval2"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#NGO"/>
@@ -1628,6 +1720,22 @@
         <NamedIndividual IRI="#PlaceOrga1Geo"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="geo:Geometry"/>
+        <NamedIndividual IRI="#PlaceSchoolBrestGeo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="geo:Geometry"/>
+        <NamedIndividual IRI="#PlaceSchoolGuipavasGeo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="geo:Geometry"/>
+        <NamedIndividual IRI="#PlaceSchoolPlabennecGeo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="geo:Geometry"/>
+        <NamedIndividual IRI="#PlaceSchoolQuimperGeo"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#BeforeCrisisStatus"/>
         <NamedIndividual IRI="#Prepared"/>
     </ClassAssertion>
@@ -1652,6 +1760,14 @@
         <NamedIndividual IRI="#T1Start"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://www.w3.org/2006/time#Instant"/>
+        <NamedIndividual IRI="#T2End"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2006/time#Instant"/>
+        <NamedIndividual IRI="#T2Start"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="owl:Thing"/>
         <NamedIndividual IRI="#Thing1"/>
     </ClassAssertion>
@@ -1674,6 +1790,14 @@
     <ClassAssertion>
         <Class IRI="#Union"/>
         <NamedIndividual IRI="#associationMairesDeFrance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#associationMairesDeFrance13"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#associationMairesDeFrance29"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#BusDrivers"/>
@@ -1928,7 +2052,7 @@
         <NamedIndividual IRI="#maskSchoolQuimper"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Organization"/>
+        <Class IRI="#Municipality"/>
         <NamedIndividual IRI="#municipality_Brest"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1977,7 +2101,27 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#School"/>
+        <NamedIndividual IRI="#school_Plabennec"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#School"/>
         <NamedIndividual IRI="#school_Quimper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Students"/>
+        <NamedIndividual IRI="#studentsSchoolBrest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Students"/>
+        <NamedIndividual IRI="#studentsSchoolGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Students"/>
+        <NamedIndividual IRI="#studentsSchoolPlabennec"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Students"/>
+        <NamedIndividual IRI="#studentsSchoolQuimper"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Teachers"/>
@@ -1986,6 +2130,10 @@
     <ClassAssertion>
         <Class IRI="#Teachers"/>
         <NamedIndividual IRI="#teachersSchoolGuipavas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Teachers"/>
+        <NamedIndividual IRI="#teachersSchoolPlabennec"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Teachers"/>
@@ -2000,56 +2148,6 @@
         <NamedIndividual IRI="#school_Guipavas"/>
         <NamedIndividual IRI="#school_Quimper"/>
     </DifferentIndividuals>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasHumanCapability"/>
-        <NamedIndividual IRI="#ChiefOrga1"/>
-        <NamedIndividual IRI="#WaitAndSee"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasLeadershipStyle"/>
-        <NamedIndividual IRI="#ChiefOrga1"/>
-        <NamedIndividual IRI="#Directive"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRelationWith"/>
-        <NamedIndividual IRI="#ChiefOrga1"/>
-        <NamedIndividual IRI="#ChiefOrga3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isHumanResourceOf"/>
-        <NamedIndividual IRI="#ChiefOrga1"/>
-        <NamedIndividual IRI="#Orga2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasHumanCapability"/>
-        <NamedIndividual IRI="#ChiefOrga2"/>
-        <NamedIndividual IRI="#Proactive"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasLeadershipStyle"/>
-        <NamedIndividual IRI="#ChiefOrga2"/>
-        <NamedIndividual IRI="#Participative"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasHumanCapability"/>
-        <NamedIndividual IRI="#ChiefOrga3"/>
-        <NamedIndividual IRI="#WaitAndSee"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasLeadershipStyle"/>
-        <NamedIndividual IRI="#ChiefOrga3"/>
-        <NamedIndividual IRI="#Participative"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasHumanCapability"/>
-        <NamedIndividual IRI="#ChiefOrga4"/>
-        <NamedIndividual IRI="#Proactive"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasLeadershipStyle"/>
-        <NamedIndividual IRI="#ChiefOrga4"/>
-        <NamedIndividual IRI="#Directive"/>
-    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/NET/c4dm/event.owl#factor"/>
         <NamedIndividual IRI="#Covid19_Step1"/>
@@ -2136,6 +2234,21 @@
         <NamedIndividual IRI="#Organization3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <NamedIndividual IRI="#Interaction3"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <NamedIndividual IRI="#Interaction3"/>
+        <NamedIndividual IRI="#hospital_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#hasTime"/>
+        <NamedIndividual IRI="#Interaction3"/>
+        <NamedIndividual IRI="#Interval2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.w3.org/2006/time#hasBeginning"/>
         <NamedIndividual IRI="#Interval1"/>
         <NamedIndividual IRI="#T1Start"/>
@@ -2144,6 +2257,16 @@
         <ObjectProperty IRI="http://www.w3.org/2006/time#hasEnd"/>
         <NamedIndividual IRI="#Interval1"/>
         <NamedIndividual IRI="#T1End"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#hasBeginning"/>
+        <NamedIndividual IRI="#Interval2"/>
+        <NamedIndividual IRI="#T2Start"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#hasEnd"/>
+        <NamedIndividual IRI="#Interval2"/>
+        <NamedIndividual IRI="#T2End"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
@@ -2241,14 +2364,14 @@
         <NamedIndividual IRI="#AchievedMissionStatus"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isComposedOfObjective"/>
-        <NamedIndividual IRI="#associationMairesDeFrance"/>
+        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
         <NamedIndividual IRI="#associationMairesDeFrance13"/>
+        <NamedIndividual IRI="#associationMairesDeFrance"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isComposedOfObjective"/>
-        <NamedIndividual IRI="#associationMairesDeFrance"/>
+        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
         <NamedIndividual IRI="#associationMairesDeFrance29"/>
+        <NamedIndividual IRI="#associationMairesDeFrance"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasMissionStatus"/>
@@ -2361,12 +2484,32 @@
         <NamedIndividual IRI="#AchievedMissionStatus"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHumanCapability"/>
+        <NamedIndividual IRI="#head_Hospital_Brest"/>
+        <NamedIndividual IRI="#WaitAndSee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLeadershipStyle"/>
+        <NamedIndividual IRI="#head_Hospital_Brest"/>
+        <NamedIndividual IRI="#Directive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelationWith"/>
+        <NamedIndividual IRI="#head_Hospital_Brest"/>
+        <NamedIndividual IRI="#head_School_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isHeadOf"/>
         <NamedIndividual IRI="#head_Hospital_Brest"/>
         <NamedIndividual IRI="#hospital_Brest"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
+        <ObjectProperty IRI="#isHumanResourceOf"/>
+        <NamedIndividual IRI="#head_Hospital_Brest"/>
+        <NamedIndividual IRI="#municipality_Brest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
         <NamedIndividual IRI="#head_Hospital_Brest"/>
         <NamedIndividual IRI="#MedecinsSansFrontieres"/>
     </ObjectPropertyAssertion>
@@ -2376,9 +2519,19 @@
         <NamedIndividual IRI="#hospital_Quimper"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
+        <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
         <NamedIndividual IRI="#head_Hospital_Quimper"/>
         <NamedIndividual IRI="#MedecinsSansFrontieres"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHumanCapability"/>
+        <NamedIndividual IRI="#head_Municipality_Brest"/>
+        <NamedIndividual IRI="#Proactive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLeadershipStyle"/>
+        <NamedIndividual IRI="#head_Municipality_Brest"/>
+        <NamedIndividual IRI="#Participative"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isHeadOf"/>
@@ -2386,7 +2539,7 @@
         <NamedIndividual IRI="#municipality_Brest"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
+        <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
         <NamedIndividual IRI="#head_Municipality_Brest"/>
         <NamedIndividual IRI="#associationMairesDeFrance"/>
     </ObjectPropertyAssertion>
@@ -2401,14 +2554,34 @@
         <NamedIndividual IRI="#municipality_Quimper"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
+        <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
         <NamedIndividual IRI="#head_Municipality_Quimper"/>
         <NamedIndividual IRI="#associationMairesDeFrance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHumanCapability"/>
+        <NamedIndividual IRI="#head_Prefecture_Finistere"/>
+        <NamedIndividual IRI="#Proactive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLeadershipStyle"/>
+        <NamedIndividual IRI="#head_Prefecture_Finistere"/>
+        <NamedIndividual IRI="#Directive"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isHeadOf"/>
         <NamedIndividual IRI="#head_Prefecture_Finistere"/>
         <NamedIndividual IRI="#prefecture_Finistere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHumanCapability"/>
+        <NamedIndividual IRI="#head_School_Brest"/>
+        <NamedIndividual IRI="#WaitAndSee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLeadershipStyle"/>
+        <NamedIndividual IRI="#head_School_Brest"/>
+        <NamedIndividual IRI="#Participative"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isHeadOf"/>
@@ -2479,6 +2652,11 @@
         <ObjectProperty IRI="#hasResource"/>
         <NamedIndividual IRI="#hospital_Brest"/>
         <NamedIndividual IRI="#respiratorsHospitalBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participate"/>
+        <NamedIndividual IRI="#hospital_Brest"/>
+        <NamedIndividual IRI="#Interaction3"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#cooperate"/>
@@ -2846,6 +3024,11 @@
         <NamedIndividual IRI="#prefecture_Finistere"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+        <NamedIndividual IRI="#school_Brest"/>
+        <NamedIndividual IRI="#PlaceSchoolBrestGeo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#collaborate"/>
         <NamedIndividual IRI="#school_Brest"/>
         <NamedIndividual IRI="#school_Quimper"/>
@@ -2878,7 +3061,17 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasResource"/>
         <NamedIndividual IRI="#school_Brest"/>
+        <NamedIndividual IRI="#studentsSchoolBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#school_Brest"/>
         <NamedIndividual IRI="#teachersSchoolBrest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+        <NamedIndividual IRI="#school_Guipavas"/>
+        <NamedIndividual IRI="#PlaceSchoolGuipavasGeo"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#collaborate"/>
@@ -2913,12 +3106,32 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasResource"/>
         <NamedIndividual IRI="#school_Guipavas"/>
+        <NamedIndividual IRI="#studentsSchoolGuipavas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#school_Guipavas"/>
         <NamedIndividual IRI="#teachersSchoolGuipavas"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isIndependent"/>
         <NamedIndividual IRI="#school_Guipavas"/>
         <NamedIndividual IRI="#school_Quimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+        <NamedIndividual IRI="#school_Plabennec"/>
+        <NamedIndividual IRI="#PlaceSchoolPlabennecGeo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#school_Plabennec"/>
+        <NamedIndividual IRI="#studentsSchoolPlabennec"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+        <NamedIndividual IRI="#school_Quimper"/>
+        <NamedIndividual IRI="#PlaceSchoolQuimperGeo"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasHead"/>
@@ -2944,6 +3157,11 @@
         <ObjectProperty IRI="#hasResource"/>
         <NamedIndividual IRI="#school_Quimper"/>
         <NamedIndividual IRI="#maskSchoolQuimper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#school_Quimper"/>
+        <NamedIndividual IRI="#studentsSchoolQuimper"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasResource"/>
@@ -3011,6 +3229,11 @@
         <Literal>SharingResource</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasType"/>
+        <NamedIndividual IRI="#Interaction3"/>
+        <Literal>SharingResource</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="geo:asWKT"/>
         <NamedIndividual IRI="#Place1Geo"/>
         <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((-4.526367 44.01178, -7.250977 49.713114, 2.241211 52.203566, 9.536133 49.02634, 11.469727 40.165441, 1.538086 40.500433, -4.526367 44.01178))</Literal>
@@ -3021,14 +3244,44 @@
         <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#wktLiteral">POLYGON((-4.526367 44.01178, -7.250977 49.713114, 2.241211 52.203566, 11.469727 40.165441, 1.538086 40.500433, -4.526367 44.01178))</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="geo:asWKT"/>
+        <NamedIndividual IRI="#PlaceSchoolBrestGeo"/>
+        <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-4.45994 48.40559)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="geo:asWKT"/>
+        <NamedIndividual IRI="#PlaceSchoolGuipavasGeo"/>
+        <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-4.39683 48.43524)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="geo:asWKT"/>
+        <NamedIndividual IRI="#PlaceSchoolPlabennecGeo"/>
+        <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-4.43214 48.49689)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="geo:asWKT"/>
+        <NamedIndividual IRI="#PlaceSchoolQuimperGeo"/>
+        <Literal datatypeIRI="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(-4.11145 47.99669)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://www.w3.org/2006/time#inXSDDate"/>
         <NamedIndividual IRI="#T1End"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2021-05-03</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2020-05-11</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.w3.org/2006/time#inXSDDate"/>
         <NamedIndividual IRI="#T1Start"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2021-03-17</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2020-03-17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/2006/time#inXSDDate"/>
+        <NamedIndividual IRI="#T2End"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2019-07-31</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/2006/time#inXSDDate"/>
+        <NamedIndividual IRI="#T2Start"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2015-09-01</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasValue"/>
@@ -3186,6 +3439,46 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">5</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasAvailableValue"/>
+        <NamedIndividual IRI="#studentsSchoolBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">33</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#studentsSchoolBrest"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAvailableValue"/>
+        <NamedIndividual IRI="#studentsSchoolGuipavas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#studentsSchoolGuipavas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">220</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAvailableValue"/>
+        <NamedIndividual IRI="#studentsSchoolPlabennec"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#studentsSchoolPlabennec"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">135</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAvailableValue"/>
+        <NamedIndividual IRI="#studentsSchoolQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#studentsSchoolQuimper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">350</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasValue"/>
         <NamedIndividual IRI="#teachersSchoolBrest"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">18</Literal>
@@ -3193,6 +3486,11 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasValue"/>
         <NamedIndividual IRI="#teachersSchoolGuipavas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#teachersSchoolPlabennec"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">5</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -3900,6 +4198,14 @@
         <Class IRI="#Decision"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasAvailableQuantity"/>
+        <Class IRI="#MaterialResource"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAvailableValue"/>
+        <Class IRI="#HumanResource"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasQuantity"/>
         <Class IRI="#MaterialResource"/>
     </DataPropertyDomain>
@@ -3911,6 +4217,14 @@
         <DataProperty IRI="#hasValue"/>
         <Class IRI="#HumanResource"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAvailableQuantity"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAvailableValue"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasQuantity"/>
         <Datatype abbreviatedIRI="xsd:int"/>
@@ -4056,6 +4370,60 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>R2</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Organization"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Organization"/>
+                <Variable IRI="#y"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasHorizontalInteraction"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasMission"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#mx"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#EducatingChildren"/>
+                <Variable IRI="#mx"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasMission"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#my"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#EducatingChildren"/>
+                <Variable IRI="#my"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#PossibleResourceSharing"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
             <Literal>R3</Literal>
         </Annotation>
         <Body>
@@ -4077,52 +4445,6 @@
                 <Variable IRI="#x"/>
                 <Variable IRI="#y"/>
             </DifferentIndividualsAtom>
-        </Body>
-        <Head>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#PossibleResourceSharing"/>
-                <Variable IRI="#x"/>
-                <Variable IRI="#y"/>
-            </ObjectPropertyAtom>
-        </Head>
-    </DLSafeRule>
-    <DLSafeRule>
-        <Annotation>
-            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal></Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>R2</Literal>
-        </Annotation>
-        <Body>
-            <ClassAtom>
-                <Class IRI="#Organization"/>
-                <Variable IRI="#x"/>
-            </ClassAtom>
-            <ClassAtom>
-                <Class IRI="#Organization"/>
-                <Variable IRI="#y"/>
-            </ClassAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#hasHorizontalInteraction"/>
-                <Variable IRI="#x"/>
-                <Variable IRI="#y"/>
-            </ObjectPropertyAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#hasMission"/>
-                <Variable IRI="#x"/>
-                <Variable IRI="#m"/>
-            </ObjectPropertyAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#hasMission"/>
-                <Variable IRI="#y"/>
-                <Variable IRI="#m"/>
-            </ObjectPropertyAtom>
         </Body>
         <Head>
             <ObjectPropertyAtom>
@@ -4220,7 +4542,7 @@
         </Annotation>
         <Body>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
                 <Variable IRI="#x"/>
                 <Variable IRI="#z"/>
             </ObjectPropertyAtom>
@@ -4262,16 +4584,56 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>R12</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#TopLevelManagement"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOf"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isHumanResourceOf"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#z"/>
+            </ObjectPropertyAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="#y"/>
+                <Variable IRI="#z"/>
+            </DifferentIndividualsAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#BoundarySpanner"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
             <Literal>R6</Literal>
         </Annotation>
         <Body>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
                 <Variable IRI="#x1"/>
                 <Variable IRI="#z"/>
             </ObjectPropertyAtom>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
                 <Variable IRI="#x2"/>
                 <Variable IRI="#z"/>
             </ObjectPropertyAtom>
@@ -4321,7 +4683,7 @@
         </Annotation>
         <Body>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isHumanResourceOfMetaOrganization"/>
+                <ObjectProperty IRI="#isMemberOfMetaOrganization"/>
                 <Variable IRI="#x"/>
                 <Variable IRI="#z"/>
             </ObjectPropertyAtom>
@@ -4409,5 +4771,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 

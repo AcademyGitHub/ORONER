@@ -1,4 +1,3 @@
-Version française ci-dessous
 
 ## Licence
 
@@ -22,4 +21,5 @@ This project is licensed under the **[Creative Commons Attribution – NonCommer
 - You are free to **share and adapt** this content  
 - **NonCommercial use only**  
 - **Attribution required**: give credit to the author and indicate if changes were made
+
 
